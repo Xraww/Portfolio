@@ -15,6 +15,10 @@
     height: 100vh;
 
     display: flex;
+    overflow: hidden;
+
+    background-color: var(--black);
+    background-image: url("../../../public/images/aaaa.png");
 }
 
 a {
@@ -29,6 +33,7 @@ li {
 
 :root {
     --black: #0A0A0A; 
+    --grey: #8d8b8b;
     --purple: #8F00FF; 
     --neon-blue: #1B03A3; 
     --pink: #FF007F; 

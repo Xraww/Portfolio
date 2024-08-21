@@ -1,0 +1,16 @@
+.home {
+    p {
+        color: var(--grey);
+    }
+
+    h1 {
+        font-size: 128px;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

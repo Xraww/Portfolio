@@ -5,14 +5,14 @@ import Contact from "../../components/Contact/Contact"
 
 import "./RightSide.scss"
 
-function RightSide({ activeSection }) {
+function RightSide() {
     return (
-        <>
-            {activeSection === "home" && <Home/>}
-            {activeSection === "projects" && <Projects/>}
-            {activeSection === "skills" && <Skills/>}
-            {activeSection === "contact" && <Contact/>}
-        </>
+        <div className="rightSide">
+            <Home/>
+            <Projects/>
+            <Skills/>
+            <Contact/>
+        </div>
     )
 }
 

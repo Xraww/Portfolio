@@ -1,41 +1,70 @@
+@mixin neon-ball($color, $width, $height, $x, $y) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $color;
+    border-radius: 50%;
+    box-shadow: 
+      0 0 50px rgba($color, 0.6), 
+      0 0 100px rgba($color, 0.4), 
+      0 0 200px rgba($color, 0.3), 
+      0 0 300px rgba($color, 0.2), 
+      0 0 400px rgba($color, 0.1); 
+    filter: blur(40px); 
+    opacity: 0.1;
+    top: $y;
+    left: $x;
+    transform: translate(-50%, -50%); 
+}
+
 .Menu {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 30%;
+    padding: 30px;
+    overflow: hidden;
 
-    nav {
-        background-color: var(--black);
-        padding: 30px;
-        width: 100%;
+    .neon-balls {
+        .neon-ball {
+            @include neon-ball(var(--turquoise), 100%, 70%, 50%, 120%); // ?
+        }
+    }
 
-        .nav-title {
-            height: 20%;
-            margin: 0 auto;
-            text-align: center;
+    .menu-header {
+        height: 20%;
+        margin: 0 auto;
+        text-align: center;
 
-            h2 {
-                a {
-                    font-family: var(--third-font);
-                    color: var(--fluo-yellow);
+        h2 {
+            a {
+                font-family: var(--third-font);
+                color: var(--fluo-yellow);
+                text-shadow: 
+                    2px 2px 5px var(--turquoise);
+                cursor: pointer;
+                font-size: 48px;
+
+                &:hover {
                     text-shadow: 
-                        2px 2px 5px var(--turquoise);
-                    cursor: pointer;
-                    font-size: 48px;
-    
-                    &:hover {
-                        text-shadow: 
-                            0 0 5px var(--turquoise), 
-                            0 0 10px var(--turquoise), 
-                            0 0 20px var(--turquoise),  
-                    }
+                        0 0 5px var(--turquoise), 
+                        0 0 10px var(--turquoise), 
+                        0 0 20px var(--turquoise),  
                 }
             }
-
-            h3 {
-                color: var(--turquoise);
-                font-family: var(--secondary-font);
-            }
         }
+
+        h3 {
+            color: var(--turquoise);
+            font-family: var(--secondary-font);
+        }
+    }
+
+    nav {
+        flex: 1;
 
         .nav-links {
             display: flex;
@@ -68,9 +97,14 @@
                 transition: border-color 1s ease-out;
 
                 color: var(--turquoise);
-                font-family: var(--secondary-font);
                 text-transform: uppercase;
                 text-shadow: 0px 0px 3px var(--pink);
+
+                a {
+                    font-family: var(--secondary-font);
+                    height: 100%;
+                    width: 100%;
+                }
                 
                 &::after {
                     content: "";
@@ -91,6 +125,31 @@
                     background: rgba(0, 0, 0, 0.5);
                     border-color: var(--pink);
                     transition: border-color 0.25s linear;
+                }
+            }
+        }
+    }
+
+    .menu-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--pink);
+        font-size: 16px;
+
+        p, span {
+            font-family: var(--secondary-font);
+        }
+
+        span {
+            a {
+                img {
+                    padding: 0 8px;
+                    height: 20px;
+                }
+
+                #github-logo {
+                    filter: invert(1);
                 }
             }
         }

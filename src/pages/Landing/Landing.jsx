@@ -15,7 +15,7 @@ function Landing() {
     return (
         <>
             <Menu activeSection={activeSection} onSectionChange={handleSectionChange}/>
-            <RightSide activeSection={activeSection}/>
+            <RightSide/>
         </>
     )
 }
