@@ -1,11 +1,21 @@
+import React, { useState } from "react";
+
+import Menu from "../../components/Menu/Menu"
+import RightSide from "../../components/RightSide/RightSide"
+
 import "./Landing.scss"
-import Header from "../../components/Header/Header" 
 
 function Landing() {
+    const [activeSection, setActiveSection] = useState("home");
+
+    const handleSectionChange = (section) => {
+        setActiveSection(section);
+    };
+
     return (
         <>
-            <Header/>
-            {/* <h1>Landing</h1> */}
+            <Menu activeSection={activeSection} onSectionChange={handleSectionChange}/>
+            <RightSide activeSection={activeSection}/>
         </>
     )
 }
