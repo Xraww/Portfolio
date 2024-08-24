@@ -1,16 +1,25 @@
-.home {
-    p {
-        color: var(--grey);
-    }
+#home {
+    color: white;
 
-    h1 {
-        font-size: 128px;
-    }
+    .introducing {
+        .left {
+            #job {
+                color: var(--grey);
+                font-size: 96px;
+            }
+        
+            h1 {
+                font-size: 128px;
+            }
+        }
 
-    img {
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-        object-fit: cover;
+        .right {
+            img {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
     }
 }

@@ -6,16 +6,20 @@ import RightSide from "../../components/RightSide/RightSide"
 import "./Landing.scss"
 
 function Landing() {
-    const [activeSection, setActiveSection] = useState("home");
-
-    const handleSectionChange = (section) => {
-        setActiveSection(section);
+    const [scrollToSection, setScrollToSection] = useState(null);
+    const [activeSection, setActiveSection] = useState(0);
+    
+    const handleScrollToSection = (index) => {
+        if (scrollToSection) {
+            scrollToSection(index);
+            setActiveSection(index);
+        }
     };
 
     return (
         <>
-            <Menu activeSection={activeSection} onSectionChange={handleSectionChange}/>
-            <RightSide/>
+            <Menu scrollToSection={handleScrollToSection} activeSection={activeSection}/>
+            <RightSide setScrollToSection={setScrollToSection}/>
         </>
     )
 }

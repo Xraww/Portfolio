@@ -28,10 +28,8 @@
     padding: 30px;
     overflow: hidden;
 
-    .neon-balls {
-        .neon-ball {
-            @include neon-ball(var(--turquoise), 100%, 70%, 50%, 120%); // ?
-        }
+    .neon-ball {
+        @include neon-ball(var(--turquoise), 100%, 70%, 50%, 120%);
     }
 
     .menu-header {
@@ -96,15 +94,10 @@
                 border-color: transparent;
                 transition: border-color 1s ease-out;
 
+                font-family: var(--secondary-font);
                 color: var(--turquoise);
                 text-transform: uppercase;
                 text-shadow: 0px 0px 3px var(--pink);
-
-                a {
-                    font-family: var(--secondary-font);
-                    height: 100%;
-                    width: 100%;
-                }
                 
                 &::after {
                     content: "";

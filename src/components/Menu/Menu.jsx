@@ -1,9 +1,8 @@
 import "./Menu.scss"
 
-function Menu({ activeSection, onSectionChange }) {
-    const handleClick = (section) => {
-        onSectionChange(section);
-    };
+function Menu({ scrollToSection, activeSection }) {
+    const sections = ["home", "projects", "skills", "contact"];
+    const displaySections = ["Accueil", "Projets", "Compétences", "Me contacter"];
 
     return (
         <div className="Menu">
@@ -14,10 +13,11 @@ function Menu({ activeSection, onSectionChange }) {
 
             <nav>
                 <ul className="nav-links">
-                    <li onClick={() => handleClick("home")} className={activeSection === "home" ? "selected" : ""}><a href="#home">Accueil</a></li>
-                    <li onClick={() => handleClick("projects")} className={activeSection === "projects" ? "selected" : ""}><a href="#projects">Mes projets</a></li>
-                    <li onClick={() => handleClick("skills")} className={activeSection === "skills" ? "selected" : ""}><a href="#skills">Mes compétences</a></li>
-                    <li onClick={() => handleClick("contact")} className={activeSection === "contact" ? "selected" : ""}><a href="#contact">Contact</a></li>
+                    {sections.map((section, index) => (
+                        <li key={section} onClick={() => scrollToSection(index)} className={activeSection === index ? "selected" : ""}>
+                            {displaySections[index]}
+                        </li>
+                    ))}
                 </ul>
             </nav>
 
@@ -36,9 +36,7 @@ function Menu({ activeSection, onSectionChange }) {
                 </span>
             </div>
 
-            <div className="neon-balls">
-                <div class="neon-ball"></div>
-            </div>
+            <div className="neon-ball"></div>
         </div>
     )
 }

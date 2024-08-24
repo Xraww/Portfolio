@@ -1,10 +1,14 @@
 .rightSide {
     width: 70%;
+    height: 100%;
     margin-left: 30%;
-    overflow: auto;
+    
+    position: relative;
+    overflow: hidden;
 
-    padding: 0 50px;
+    border-left: 3px solid var(--pink);
 
-    color: white;
-    border: 1px solid red;
+    .parallax-layer {
+        padding: 50px;
+    }
 }
