@@ -10,5 +10,14 @@
 
     .parallax-layer {
         padding: 50px;
+        border: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px; 
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--pink);
     }
 }

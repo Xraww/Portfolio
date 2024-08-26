@@ -1,25 +1,9 @@
 #home {
+    background-color: var(--black);
+    background-image: url("/images/texture.png");
     color: white;
-
-    .introducing {
-        .left {
-            #job {
-                color: var(--grey);
-                font-size: 96px;
-            }
-        
-            h1 {
-                font-size: 128px;
-            }
-        }
-
-        .right {
-            img {
-                height: 200px;
-                width: 200px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-        }
-    }
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
 }

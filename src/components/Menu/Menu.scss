@@ -28,6 +28,9 @@
     padding: 30px;
     overflow: hidden;
 
+    background-color: var(--black);
+    background-image: url("/images/texture.png");
+
     .neon-ball {
         @include neon-ball(var(--turquoise), 100%, 70%, 50%, 120%);
     }

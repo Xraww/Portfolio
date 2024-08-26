@@ -36,9 +36,6 @@ body {
     height: 100%;
 
     display: flex;
-
-    background-color: var(--black);
-    background-image: url("/images/texture.png");
 }
 
 a {
@@ -50,15 +47,3 @@ li {
     list-style: none;
     user-select: none;
 }
-
-::-webkit-scrollbar {
-    width: 10px; 
-}
-  
-::-webkit-scrollbar-thumb {
-    background-color: var(--pink); 
-}
-  
-::-webkit-scrollbar-track {
-    background: white;
-}   

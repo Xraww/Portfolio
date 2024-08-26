@@ -1,13 +1,96 @@
+import React, { useState, useRef, useEffect } from "react"
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { gsap } from "gsap";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { GiClick } from "react-icons/gi";
+import { GrClose } from "react-icons/gr";
+
 import "./Projects.scss"
 
 function Projects() {
-    return (
-        <div id="projects">
-            <h2>Projects</h2>
+    const parallax = useRef(null);
 
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum culpa, amet mollitia fugiat libero eius necessitatibus magni tempore similique aspernatur consectetur ex earum quaerat itaque modi dicta ab. Nam sint at itaque amet. Reiciendis adipisci voluptates, voluptate commodi, vero quibusdam architecto cum necessitatibus aspernatur odio id placeat. Modi itaque, ut commodi neque aspernatur dolorum illum numquam quas hic, mollitia sapiente aliquid, eligendi repudiandae voluptate et? Impedit, dolorem dolores voluptates blanditiis deleniti ad in sequi maiores inventore doloremque, quos neque esse quia temporibus non omnis dolorum earum quibusdam eos. Perferendis debitis saepe, autem officia quas, vero soluta sed et natus deserunt iusto ratione totam. Ipsa ipsum, quisquam, enim veniam tempora repellat laudantium nobis iure porro, libero officiis rem. Perspiciatis, earum deleniti qui repudiandae iste officia reprehenderit modi maxime, eveniet nisi adipisci cupiditate cumque soluta, tenetur numquam vel minus ipsa iusto eligendi repellat dolor laudantium beatae! Quis tempora modi expedita autem! Assumenda eos nobis esse quod facilis ipsum sapiente enim dolorum officia iure! Dicta voluptas neque minus, deserunt necessitatibus pariatur? Distinctio ullam eius earum asperiores maxime, ea culpa accusamus unde. Esse dicta temporibus quibusdam expedita sed minus ullam iusto omnis? Explicabo possimus, dolore autem facilis suscipit architecto totam ratione quia maiores odit eveniet similique nulla velit laboriosam neque voluptatum mollitia aliquam laudantium deleniti repudiandae sunt quae! Laborum rem esse laboriosam molestiae error, illum suscipit dolores. Exercitationem aperiam nesciunt, voluptates reprehenderit voluptatem ex, ea qui ducimus nihil enim dolor odio ullam recusandae quod magni eius nisi beatae in perspiciatis, architecto non voluptate ipsa. Culpa, et! Magni provident expedita, facere quae incidunt itaque cupiditate consequuntur inventore qui cumque nam adipisci enim, odio assumenda vero. Laudantium, fugiat! Ad molestiae quibusdam nesciunt. Placeat iure illum in magnam excepturi, voluptate rem consequatur, expedita ut aliquid nisi impedit id quisquam neque harum veritatis laudantium autem delectus ab cupiditate officiis eaque magni, voluptatem perferendis! Blanditiis vel autem esse dolorum, expedita reiciendis cupiditate eaque labore incidunt dignissimos illum iusto magni maxime enim voluptates dicta. Voluptate nulla sit veniam! Molestias vel quisquam recusandae modi voluptatem, natus excepturi asperiores voluptate odit veritatis harum aliquid veniam ut corporis autem dolorum, sapiente, eius quia repellendus ipsa. Cupiditate praesentium atque corrupti laboriosam cum eligendi obcaecati odio velit quo quis quidem ducimus similique, iure nobis necessitatibus in veritatis quos sapiente? Voluptatum optio dolore blanditiis dolores, fugiat ipsam nemo molestiae eos. Voluptates atque recusandae, earum exercitationem culpa voluptatum sequi iusto esse totam ratione perspiciatis ipsum voluptatem et laboriosam amet saepe praesentium ullam eveniet possimus neque quo. Facere consectetur reiciendis voluptates quae consequatur accusamus vero id qui molestiae quas enim corrupti officiis perspiciatis temporibus consequuntur, beatae, blanditiis dicta magni natus dolor possimus? Neque obcaecati, nemo sed dolorum sunt doloribus ipsum atque amet, exercitationem odio accusamus ipsa. Fuga enim eveniet quod autem numquam? Id necessitatibus reiciendis deleniti doloremque nulla enim excepturi dignissimos corporis officia fugiat suscipit modi veritatis consectetur, iusto error inventore possimus porro facere quae amet dolorum pariatur eius molestias. Animi odit eveniet soluta blanditiis similique quia aspernatur voluptatem aliquam error tenetur omnis praesentium deserunt, culpa, assumenda repellendus!
+    const scroll = (number) => {
+        if (parallax.current) {
+            parallax.current.scrollTo(number)
+        }
+    };
+
+    const handleGSAPAnimation = (closeIconRef, imageRef, textRef, clickIconRef, showText) => {
+        if (imageRef.current && textRef.current) {
+            if (showText) {
+                gsap.to(imageRef.current, { opacity: 0, scale: 0.8, duration: 0.5 });
+                gsap.to(textRef.current, { opacity: 1, y: 0, duration: 0.5, delay: 0.3 });
+                textRef.current.style.pointerEvents = "auto";
+                imageRef.current.style.pointerEvents = "none";
+
+                closeIconRef.current.style.display = "block";
+                clickIconRef.current.style.color = "transparent";
+            } else {
+                gsap.to(imageRef.current, { opacity: 1, scale: 1, duration: 0.5 });
+                gsap.to(textRef.current, { opacity: 0, y: 20, duration: 0.5 });
+                textRef.current.style.pointerEvents = "none";
+                imageRef.current.style.pointerEvents = "auto";
+
+                closeIconRef.current.style.display = "none";
+                clickIconRef.current.style.color = "black";
+            }
+        }
+    };
+
+    const createParallaxLayer = (offset, title, imageSrc, text, link, scrollLeft, scrollRight) => {
+        const [showText, setShowText] = useState(false);
+        const closeIconRef = useRef(null);
+        const imageRef = useRef(null);
+        const textRef = useRef(null);
+        const clickIconRef = useRef(null);
+    
+        useEffect(() => {
+            handleGSAPAnimation(closeIconRef, imageRef, textRef, clickIconRef, showText);
+        }, [showText]);
+        return (
+            <ParallaxLayer offset={offset} speed={0.5} className="layers">
+                <div className="content">
+                <button className="back-button" ref={closeIconRef} onClick={() => setShowText(false)}><GrClose/></button>
+
+                    <div className="project-page">
+                        <div className="image-icon">
+                            <img ref={imageRef} src={imageSrc} alt={`Project ${offset + 1}`} className="project-img" onClick={() => setShowText(true)}/>
+                            <span ref={clickIconRef} id="click-icon"><GiClick size={48}/></span>
+                        </div>
+
+                        <h3>Projet {offset + 1} - {title}</h3>
+
+                        <div ref={textRef} className="project-text">
+                            <h2>Détails du projet</h2>
+                            <p>{text}</p>
+                            <a href={link} target="_blank">Lien vers le répository GitHub</a>
+                        </div>
+                    </div>
+
+                    <FaChevronLeft id="arrowleft" size={32} onClick={() => scroll(scrollLeft)} />
+                    <FaChevronRight id="arrowRight" size={32} onClick={() => scroll(scrollRight)} />
+                </div>
+            </ParallaxLayer>
+        );
+    };
+
+    return (
+        <div id="projects"> 
+            <h2>Mes projets</h2>
+
+            <div className="parallax">
+                <Parallax pages={5} ref={parallax} horizontal>
+                    {createParallaxLayer(0, "Booki", "/images/project-1.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "https://github.com/Xraww/Booki", 4, 1)}
+                    {createParallaxLayer(1, "Sophie Bluel | Portfolio", "/images/project-2.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "https://github.com/Xraww/Architecte", 0, 2)}
+                    {createParallaxLayer(2, "Kasa Location", "/images/project-3.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.","https://github.com/Xraww/Kasa", 1, 3)}
+
+                    {createParallaxLayer(3, "Mon vieux grimoire", "/images/project-4.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "https://github.com/Xraww/Grimoire", 2, 4)}
+                    {createParallaxLayer(4, "Nina Carducci | Portfolio", "/images/project-5.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "https://github.com/Xraww/Photographer", 3, 0)}
+                </Parallax>
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Projects;
