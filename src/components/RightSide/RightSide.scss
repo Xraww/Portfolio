@@ -2,15 +2,16 @@
     width: 70%;
     height: 100%;
     margin-left: 30%;
-    
     position: relative;
     overflow: hidden;
+    border-left: 2px solid var(--pink);
 
-    border-left: 3px solid var(--pink);
+    #layer-1, #layer-3 {
+        padding: 0;
+    }
 
     .parallax-layer {
         padding: 50px;
-        border: none;
     }
 
     ::-webkit-scrollbar {

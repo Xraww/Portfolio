@@ -137,15 +137,17 @@
             font-family: var(--secondary-font);
         }
 
-        span {
-            a {
-                img {
-                    padding: 0 8px;
-                    height: 20px;
+        p {
+            span {
+                padding: 0 8px;
+                height: 20px;
+
+                &:nth-of-type(1) {
+                    color: var(--turquoise);
                 }
 
-                #github-logo {
-                    filter: invert(1);
+                &:nth-of-type(2) {
+                    color: white;
                 }
             }
         }

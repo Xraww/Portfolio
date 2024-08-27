@@ -19,7 +19,7 @@ function Landing() {
     return (
         <>
             <Menu scrollToSection={handleScrollToSection} activeSection={activeSection}/>
-            <RightSide setScrollToSection={setScrollToSection}/>
+            <RightSide setScrollToSection={setScrollToSection} scrollToSection={handleScrollToSection}/>
         </>
     )
 }

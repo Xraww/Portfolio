@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReact, faGithub } from '@fortawesome/free-brands-svg-icons'
 import "./Menu.scss"
 
 function Menu({ scrollToSection, activeSection }) {
@@ -23,17 +25,7 @@ function Menu({ scrollToSection, activeSection }) {
 
             <div className="menu-footer">
                 <p>© 2024 Xraww. All rights reserved</p>
-
-                <span>
-                    Développé avec
-                    <a href="https://react.dev/" target="_blank" rel="nofollow noopener noreferrer">
-                        <img src="/images/react-logo.svg" alt="ReactJs logo"/>
-                    </a>
-                    et hébergé sur
-                    <a href="https://github.com/Xraww/Portfolio" target="_blank" rel="nofollow noopener noreferrer">
-                        <img src="/images/github-logo.svg" alt="GitHub logo" id="github-logo"/>
-                    </a>
-                </span>
+                <p>Développé avec<span><FontAwesomeIcon icon={faReact}/></span>et hébergé sur<span><FontAwesomeIcon icon={faGithub}/></span></p>
             </div>
 
             <div className="neon-ball"></div>

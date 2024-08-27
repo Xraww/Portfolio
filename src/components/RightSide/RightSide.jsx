@@ -8,7 +8,7 @@ import Contact from "../../components/Contact/Contact"
 
 import "./RightSide.scss"
 
-function RightSide({ setScrollToSection }) {
+function RightSide({ setScrollToSection, scrollToSection }) {
     const parallax = useRef(null);
 
     useEffect(() => {
@@ -20,15 +20,15 @@ function RightSide({ setScrollToSection }) {
     return (
         <div className="rightSide">
             <Parallax pages={4} ref={parallax}>
-                <ParallaxLayer offset={0} speed={0.5} className="parallax-layer">
-                    <Home/>
+                <ParallaxLayer offset={0} speed={0.5} id="layer-1" className="parallax-layer">
+                    <Home scrollToSection={scrollToSection}/>
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={1} speed={0.5} className="parallax-layer">
                     <Projects/>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={2} speed={0.5} className="parallax-layer">
+                <ParallaxLayer offset={2} speed={0.5} id="layer-3" className="parallax-layer">
                     <Skills/>
                 </ParallaxLayer>
 
