@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faReact, faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faDownload, faEnvelope, faLocationDot, faGlobe } from "@fortawesome/free-solid-svg-icons"
 
+import Form from "../../components/Form/Form"
 import "./Contact.scss"
 
 function Contact() {
@@ -22,7 +23,7 @@ function Contact() {
                 }, 2000);
             })
             .catch((err) => {
-                console.error('Erreur lors de la copie :', err);
+                console.error("Erreur lors de la copie :", err);
             });
     };
 
@@ -40,32 +41,18 @@ function Contact() {
                         <span><FontAwesomeIcon icon={faGlobe}/>À distance</span>
                     </div>
 
-                    <div className="box-item" id={isCopied ? 'copied' : ''}  onClick={handleCopy}>
+                    <div className="box-item" id={isCopied ? "copied" : ""}  onClick={handleCopy}>
                         <span><FontAwesomeIcon icon={faEnvelope}/>{message}</span>
                     </div>
                 </div>
 
                 <div className="text-line">
-                        <div className="line"></div>
-                        <p>Ou alors, vous pouvez utiliser le formulaire</p>
-                        <div className="line"></div>
-                    </div>
+                    <div className="line"></div>
+                    <p>Ou alors, vous pouvez utiliser le formulaire</p>
+                    <div className="line"></div>
+                </div>
 
-                    <form>
-                        <div className="email">
-                            <label htmlFor="email">Email</label>
-                            <input className="inputs" type="email" id="email" placeholder="Entrez votre e-mail" required />
-                        </div>
-
-                        <div className="message">
-                            <label htmlFor="message">Message</label>
-                            <textarea className="inputs" name="message" id="message" placeholder="Entrez votre message ici..." required ></textarea>
-                        </div>
-
-                        <div className="btn-submit">
-                            <button type="submit">Envoyer</button>
-                        </div>
-                    </form>
+                <Form/>
             </div>
             
             <footer>
