@@ -1,21 +1,21 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHtml5, faSass, faJs, faReact, faCss3Alt, faNode } from '@fortawesome/free-brands-svg-icons'
-import { faServer, faDatabase, faBars, faGear, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHtml5, faSass, faJs, faReact, faCss3Alt, faNode } from "@fortawesome/free-brands-svg-icons"
+import { faServer, faDatabase, faBars, faGear, faGlobe } from "@fortawesome/free-solid-svg-icons"
 import "./Skills.scss"
 
 function Skills() {
     const skills = [
         {name: "HTML", percentage: 70, icon: faHtml5},
-        {name: "CSS", percentage: 65, icon: faCss3Alt},
+        {name: "CSS", percentage: 60, icon: faCss3Alt},
         {name: "Sass", percentage: 50, icon: faSass},
-        {name: "Responsive", percentage: 65, icon: faBars},
+        {name: "Responsive", percentage: 55, icon: faBars},
         {name: "Javascript", percentage: 60, icon: faJs},
         {name: "React", percentage: 45, icon: faReact},
         {name: "SEO", percentage: 55, icon: faGear},
         {name: "Node.js", percentage: 40, icon: faNode},
-        {name: "API", percentage: 50, icon: faGlobe},
-        {name: "MongoDB", percentage: 55, icon: faServer},
-        {name: "MySQL", percentage: 60, icon: faDatabase},
+        {name: "API", percentage: 40, icon: faGlobe},
+        {name: "MongoDB", percentage: 45, icon: faServer},
+        {name: "MySQL", percentage: 50, icon: faDatabase},
     ];
 
     const technologies = ["Git", "Postman", "VsCode", "B2 Anglais", "Adaptabilité", "Agilité d'apprentissage", "Motivé"];

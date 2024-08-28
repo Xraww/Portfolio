@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Home from "../../components/Home/Home"
@@ -24,7 +24,7 @@ function RightSide({ setScrollToSection, scrollToSection }) {
                     <Home scrollToSection={scrollToSection}/>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={1} speed={0.5} className="parallax-layer">
+                <ParallaxLayer offset={1} speed={0.5} id="layer-2" className="parallax-layer">
                     <Projects/>
                 </ParallaxLayer>
 
@@ -32,7 +32,7 @@ function RightSide({ setScrollToSection, scrollToSection }) {
                     <Skills/>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={3} speed={0.5} className="parallax-layer">
+                <ParallaxLayer offset={3} speed={0.5} id="layer-4" className="parallax-layer">
                     <Contact/> 
                 </ParallaxLayer>
             </Parallax>

@@ -89,6 +89,7 @@
                             top: 20%;
                             right: 10%;
                             color: var(--black);
+                            font-size: 48px;
                             z-index: 1;
                             opacity: 1;
                             animation: pulse 2s ease-in-out infinite;
@@ -125,6 +126,7 @@
                     left: 15px;
                     cursor: pointer;
                     color: var(--pink);
+                    font-size: 32px;
                 }
 
                 #arrowRight {
@@ -133,6 +135,7 @@
                     right: 15px;
                     cursor: pointer;
                     color: var(--pink);
+                    font-size: 32px;
                 }
             }
         }
@@ -145,15 +148,15 @@
 
 @keyframes pulse {
     0% {
-        transform: scale(1);
+        transform: scale(1) rotate(-30deg);
         opacity: 1;
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.2) rotate(-30deg);
         opacity: 0.7;
     }
     100% {
-        transform: scale(1);
+        transform: scale(1) rotate(-30deg);
         opacity: 1;
     }
 }

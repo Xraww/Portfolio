@@ -8,18 +8,16 @@
     background-image: url("/images/texture.png");
 
     .introducing {
-        height: 50%;
         display: flex;
         align-items: center;
         gap: 50px;
-        padding: 50px;
-        background-color: #0d0d0d;
+        padding: 0 50px;
 
         .about-me {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            gap: 30px;
+            gap: 20px;
             color: white;
             height: 100%;
 

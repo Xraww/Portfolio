@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { gsap } from "gsap";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { GiClick } from "react-icons/gi";
-import { GrClose } from "react-icons/gr";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHandPointer, faXmark, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import "./Projects.scss"
 
@@ -51,12 +51,12 @@ function Projects() {
         return (
             <ParallaxLayer offset={offset} speed={0.5} className="layers">
                 <div className="content">
-                <button className="back-button" ref={closeIconRef} onClick={() => setShowText(false)}><GrClose/></button>
+                <button className="back-button" ref={closeIconRef} onClick={() => setShowText(false)}><FontAwesomeIcon icon={faXmark}/></button>
 
                     <div className="project-page">
                         <div className="image-icon">
                             <img ref={imageRef} src={imageSrc} alt={`Project ${offset + 1}`} className="project-img" onClick={() => setShowText(true)}/>
-                            <span ref={clickIconRef} id="click-icon"><GiClick size={48}/></span>
+                            <span ref={clickIconRef} id="click-icon"><FontAwesomeIcon icon={faHandPointer}/></span>
                         </div>
 
                         <h3>Projet {offset + 1} - {title}</h3>
@@ -68,8 +68,8 @@ function Projects() {
                         </div>
                     </div>
 
-                    <FaChevronLeft id="arrowleft" size={32} onClick={() => scroll(scrollLeft)} />
-                    <FaChevronRight id="arrowRight" size={32} onClick={() => scroll(scrollRight)} />
+                    <FontAwesomeIcon id="arrowleft" icon={faChevronLeft} onClick={() => scroll(scrollLeft)}/>
+                    <FontAwesomeIcon id="arrowRight" icon={faChevronRight} onClick={() => scroll(scrollRight)}/>
                 </div>
             </ParallaxLayer>
         );
