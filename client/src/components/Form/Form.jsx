@@ -10,30 +10,39 @@ function Form() {
     const [statusColor, setStatusColor] = useState("#000000");
     const formRef = useRef(null);
 
+    const statusMessage = function (state) {
+        if (state === "good") {
+            setStatus("Message envoyé avec succès");
+            setStatusColor("green");
+        }
+        else if (state === "error") {
+            setStatus("Erreur lors de l'envoi du message");
+            setStatusColor("red");
+        }
+
+        setTimeout(() => {
+            setStatus("");
+            setStatusColor("#000000");
+        }, 2000);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             await axios.post("http://localhost:5000/send-email", { email, message }, {
                 headers: {
-                  "Content-Type": "application/json"
+                    "Content-Type": "application/json"
                 }
             });
 
-            setStatus("Message envoyé avec succès");
-            setStatusColor("green");
-
-            setTimeout(() => {
-                setStatus("");
-                setStatusColor("#000000");
-            }, 2000);
+            statusMessage("good");
 
             formRef.current.reset();
-            setEmail(""); 
+            setEmail("");
             setMessage("");
         } catch (error) {
-            setStatus("Erreur lors de l'envoi du message");
-            setStatusColor("red"); 
+            statusMessage("error");
         }
     };
 

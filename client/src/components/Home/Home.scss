@@ -147,3 +147,114 @@
         text-shadow: none;
     }
 }
+
+@media (max-width: 1300px) {
+    #home {
+        .introducing img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    #home {
+        justify-content: normal;
+
+        .introducing {
+            padding: 50px;
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+@media (max-width: 1064px) {
+    #home {
+        .introducing {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .about-me {
+                .text {
+                    h1, h2 {
+                        text-align: center;
+                    }
+
+                    h2 {
+                        font-size: 24px;
+                    }
+                }
+
+                .education .list {
+                    gap: 5px;
+                    flex-wrap: wrap;
+        
+                    span {
+                        font-size: 12px;
+                        padding: 5px;
+        
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        .introducing {
+            .about-me {
+                .text {
+                    align-items: center;
+                }
+            }
+
+            img {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    #home {
+        .introducing {
+            gap: 20px;
+            padding: 50px 10px;
+
+            .about-me {
+                .text {
+                    h1 {
+                        font-size: 32px;
+                    }
+
+                    h2 {
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+
+                .buttons {
+                    align-items: center;
+                    
+                    .btn {
+                        height: 100%;
+                    }
+
+                    .btn-icons {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

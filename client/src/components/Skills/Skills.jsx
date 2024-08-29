@@ -18,7 +18,7 @@ function Skills() {
         {name: "MySQL", percentage: 50, icon: faDatabase},
     ];
 
-    const technologies = ["Git", "Postman", "VsCode", "B2 Anglais", "Adaptabilité", "Agilité d'apprentissage", "Motivé"];
+    const technologies = ["Git", "Postman", "B2 Anglais", "Adaptabilité", "Agilité d'apprentissage", "Motivé"];
 
     return (
         <div id="skills">

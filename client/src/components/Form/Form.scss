@@ -29,15 +29,9 @@ form {
     }
 
     .message {
-        height: 50%;
-
-        label {
-            height: 10%;
-        }
-
         textarea {
             resize: none;
-            height: 90%;
+            height: 150px;
         }
     }
 
