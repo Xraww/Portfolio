@@ -64,3 +64,13 @@ form {
         }
     }
 }
+
+@media (max-width: 500px) {
+    form {
+        .btn-submit {
+            button[type="submit"] {
+                width: fit-content;
+            }
+        }
+    }
+}
