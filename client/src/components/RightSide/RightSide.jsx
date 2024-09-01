@@ -8,14 +8,26 @@ import Contact from "../../components/Contact/Contact"
 
 import "./RightSide.scss"
 
-function RightSide({ setScrollToSection, scrollToSection }) {
+function RightSide({ setScrollToSection, scrollToSection, setActiveSection }) {
     const parallax = useRef(null);
 
     useEffect(() => {
         setScrollToSection(() => (index) => {
             parallax.current.scrollTo(index);
         });
-    }, [setScrollToSection]);
+
+        const handleScroll = () => {
+            const currentScroll = parallax.current.current / parallax.current.space;
+            setActiveSection(Math.round(currentScroll));
+        };
+
+        const parallaxInstance = parallax.current.container.current;
+        parallaxInstance.addEventListener("scroll", handleScroll);
+
+        return () => {
+            parallaxInstance.removeEventListener("scroll", handleScroll);
+        };
+    }, [setScrollToSection, setActiveSection]);
 
     return (
         <div className="rightSide">
