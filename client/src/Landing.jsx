@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
-import Menu from "../../components/Menu/Menu"
-import RightSide from "../../components/RightSide/RightSide"
-
-import "./Landing.scss"
+import Menu from "./components/Menu/Menu"
+import RightSide from "./components/RightSide/RightSide"
 
 function Landing() {
     const [scrollToSection, setScrollToSection] = useState(null);

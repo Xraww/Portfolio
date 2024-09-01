@@ -26,7 +26,7 @@ function Menu({ scrollToSection, activeSection }) {
                     </ul>
                 </nav>
 
-                <div className="neon-ball"></div>
+                {/* <div className="neon-ball"></div> */}
             </div>
         </>
     )

@@ -75,8 +75,8 @@ function Projects() {
 
                         <div ref={textRef} className="project-text">
                             <div className="titles">
-                                <h2>Détails du projet</h2>
-                                <h4>Projet {offset + 1} - {title}</h4>
+                                <h4>Détails du projet</h4>
+                                <h5>Projet {offset + 1} - {title}</h5>
                             </div>
 
                             <div className="paragraphs">

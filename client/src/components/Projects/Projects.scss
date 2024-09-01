@@ -128,8 +128,13 @@
                             text-align: center;
                             gap: 10px;
                             
-                            h2 {
+                            h4 {
                                 color: var(--pink);
+                                font-size: 24px;
+                            }
+
+                            h5 {
+                                font-size: 20px;
                             }
                         }
 
@@ -205,8 +210,6 @@
 
 @media (max-width: 1055px) {
     #projects .parallax .layers .content .project-page {
-        height: 100%;
-
         .project-text {
             height: 100%;
             width: 100%;
@@ -218,7 +221,7 @@
     #projects .parallax .layers .content .project-page {
         .project-text {
             .titles {
-                h2 {
+                h4 {
                     font-size: 28px;
                 }
             }
@@ -230,7 +233,7 @@
     #projects .parallax .layers .content .project-page {
         .project-text {
             .titles {
-                h2 {
+                h4 {
                     font-size: 28px;
                 }
             }
@@ -279,11 +282,11 @@
             border: none;
 
             .titles {
-                h2 {
+                h4 {
                     font-size: 16px;
                 }
 
-                h4 {
+                h5 {
                     font-size: 16px;
                 }
             }
