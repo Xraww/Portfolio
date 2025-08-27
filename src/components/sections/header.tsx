@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
@@ -8,7 +7,7 @@ export default function Header() {
         <header className="mt-10 flex flex-col gap-4 mx-4 md:mx-0">
             <div className="flex items-center gap-4">
                 <Avatar className="w-25 h-25">
-                    <AvatarImage src="/profile-picture.jpg" alt="Xraww Profile Picture"/>
+                    <AvatarImage src="/images/profile-picture.jpg" alt="Xraww Profile Picture"/>
                     <AvatarFallback>X</AvatarFallback>
                 </Avatar>
 

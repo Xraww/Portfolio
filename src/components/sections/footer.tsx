@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className="mb-8 mx-4 md:mx-0">
             <div className="flex flex-col gap-4 items-start">
-                 <Button variant="link" className="cursor-pointer text-lg active:bg-muted/20 sm:active:bg-transparent rounded px-1 font-mono" asChild>
+                 <Button variant="link" className="cursor-pointer text-lg active:bg-muted/20 sm:active:bg-transparent rounded p-0 font-mono" asChild>
                     <Link href="/">
                         xraww.fr
                     </Link>
