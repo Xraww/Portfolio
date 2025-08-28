@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { GalleryVerticalEnd, ChevronRight } from "lucide-react";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Projects() {
     const router = useRouter();
@@ -15,36 +17,45 @@ export default function Projects() {
                 What I've done 
             </h2>
 
+            <div className="flex justify-end">
+                <Button variant="ghost" className="w-fit gap-1 text-muted-foreground" asChild>    
+                    <Link href="/projects">
+                        Let's see what I've done
+                        <ChevronRight className="w-4 h-4"/>
+                    </Link>
+                </Button>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-4">
                 {My_Projects.map((project) => (
                     project.pinned ? (
                         <div 
                             key={project.id} 
-                            className="border rounded-md cursor-pointer bg-gradient-to-br from-background to-accent/20 hover:bg-accent/50 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 "
+                            className="rounded-md cursor-pointer bg-gradient-to-br from-background to-accent/20 hover:bg-accent/50 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 h-full flex flex-col"
                             onClick={() => {
                                 router.push(`/projects/${project.id}`);
                             }}
                         >
-                            <div className="flex flex-col gap-2 h-full">
+                            <div className="flex flex-col h-full">
                                 <Image 
                                     src={`${project.images.base_url}${project.images.preview}`} 
                                     alt={project.name} 
                                     width={100} 
                                     height={100} 
-                                    className="w-full h-3/4 rounded-t-md"
+                                    className="w-full h-48 object-cover rounded-t-md"
                                     unoptimized
                                 />
 
-                                <div className="flex flex-col gap-2 p-4">
+                                <div className="flex flex-col gap-2 p-4 flex-1">
                                     <h3 className="text-lg font-semibold font-sans">
                                         {project.name}
                                     </h3>
 
-                                    <p className="text-sm text-muted-foreground font-sans">
+                                    <p className="text-sm text-muted-foreground font-sans flex-1">
                                         {project.description}
                                     </p>
 
-                                    <div className="flex gap-2 flex-wrap">
+                                    <div className="flex gap-2 flex-wrap mt-auto">
                                         {(project.stack.length > 3
                                             ? [...project.stack.slice(0, 3), "..."]
                                             : project.stack
@@ -64,7 +75,7 @@ export default function Projects() {
                     ) : null
                 ))}
                 <div 
-                    className="group relative overflow-hidden border rounded-md cursor-pointer hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-gradient-to-br from-background to-accent/20"
+                    className="group relative overflow-hidden rounded-md cursor-pointer hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-gradient-to-br from-background to-accent/20"
                     onClick={() => {
                         router.push("/projects");
                     }}
@@ -118,7 +129,7 @@ export default function Projects() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-2 items-center justify-center">
+                        <div className="flex flex-col gap-2 items-center justify-center md:pt-4">
                             <p className="text-sm font-mono">
                                 More coming soon...
                             </p>
@@ -128,7 +139,7 @@ export default function Projects() {
                             </p>
                         </div>
 
-                        <div className="flex items-center justify-between pt-2">
+                        <div className="flex items-center justify-between pt-2 md:pt-4">
                             <Badge variant="outline" className="text-xs font-sans">
                                 View all
                             </Badge>

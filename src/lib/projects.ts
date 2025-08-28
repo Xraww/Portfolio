@@ -27,7 +27,7 @@ export const My_Projects = [
     {
         id: "lol-tracker",
         name: "League of Legends Tracker",
-        description: "A website to search for players, stats and more about League of Legends",
+        description: "Search for players, stats and more about League of Legends...",
         details: LolTrackerDetails,
         demo: "",
         code: "https://github.com/Xraww/LolTracker",
@@ -47,7 +47,7 @@ export const My_Projects = [
     {
         id: "sneakers",
         name: "Sneakers",
-        description: "A web application to manage a sneakers collection with admin panel",
+        description: "Manage a sneakers collection with admin panel and more...",
         details: SneakersDetails,
         demo: "",
         code: "", // https://github.com/Xraww/Sneakers
@@ -64,14 +64,14 @@ export const My_Projects = [
     {
         id: "concierge",
         name: "Concierge service",
-        description: "A concierge service website",
+        description: "Landing page for the concierge service of a friend's business...",
         details: ConciergeServiceDetails,
         demo: "https://conciergerie-gilt.vercel.app/",
         code: "", // https://github.com/Xraww/Conciergerie
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
         images: { 
             base_url: "/images/projects/concierge-service/",
-            preview: "/images/projects/concierge-service/landing/Landing-Hero.png",
+            preview: "landing/Landing-Hero.png",
             landing: ["Landing-Hero.png", "Landing-Services.png", "Landing-Faq.png", "Landing-Contact.png"],
         },
         pinned: false,
@@ -79,17 +79,17 @@ export const My_Projects = [
     {
         id: "invoice-maker",
         name: "Invoice Maker",
-        description: "A web application to create invoices for a friend's business",
+        description: "Create invoices for a friend's business using a form and handle PDF export...",
         details: InvoiceMakerDetails,
         demo: "",
         code: "", // https://github.com/Xraww/InvoiceMaker
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
         images: {
             base_url: "/images/projects/invoice-maker/",
-            preview: "/images/projects/invoice-maker/landing/Landing.png",
+            preview: "landing/Preview.png",
             form: ["Form-Client.png", "Form-Company.png", "Form-Without-Services.png", "Form-With-Services.png"],
             landing: ["Landing.png"],
-            previzualisation: ["Prev-Completed.png", "Prev-Not-Completed.png"],
+            previsualization: ["Prev-Completed.png", "Prev-Not-Completed.png"],
             signin: ["Mdp.png"],
         },
         pinned: false,
@@ -97,14 +97,14 @@ export const My_Projects = [
     {
         id: "portfolio",
         name: "Portfolio",
-        description: "My personal portfolio website",
+        description: "My personal portfolio website, with my projects and information about me...",
         details: PortfolioDetails,
         demo: "https://xraww.fr",
         code: "", // https://github.com/Xraww/Portfolio
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
         images: { // TODO: TAKE IMAGES WHEN DONE
             base_url: "/images/projects/portfolio/",
-            preview: "/images/projects/lol-tracker/Profile/Profile.png",
+            preview: "landing/Preview.png",
         },
         pinned: false,
     },
