@@ -4,21 +4,15 @@ import { My_Projects } from "../../lib/projects"
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Badge } from "../../components/ui/badge";
-import { ChevronLeft, Plus } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
+import GotoButton from "@/components/ui/goto-button";
 
 export default function Projects() {
     const router = useRouter();
 
     return (
         <section className="flex flex-col gap-4 mx-4 md:mx-0 my-4">
-            <Button variant="ghost" className="w-fit !pl-0 gap-1 text-muted-foreground" asChild>    
-                <Link href="/">
-                    <ChevronLeft className="w-4 h-4"/>
-                    Return to home
-                </Link>
-            </Button>
+            <GotoButton href="/" text="Return to home" type="back"/>
 
             <h2 className="border-b pb-2 text-2xl md:text-3xl font-semibold font-mono">
                 What I've done 

@@ -5,8 +5,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { GalleryVerticalEnd, ChevronRight } from "lucide-react";
-import { Button } from "../ui/button";
-import Link from "next/link";
+import GotoButton from "../ui/goto-button";
 
 export default function Projects() {
     const router = useRouter();
@@ -18,12 +17,7 @@ export default function Projects() {
             </h2>
 
             <div className="flex justify-end">
-                <Button variant="ghost" className="w-fit gap-1 text-muted-foreground" asChild>    
-                    <Link href="/projects">
-                        Let's see what I've done
-                        <ChevronRight className="w-4 h-4"/>
-                    </Link>
-                </Button>
+                <GotoButton href="/projects" text="Let's see what I've done" type="forward"/>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
