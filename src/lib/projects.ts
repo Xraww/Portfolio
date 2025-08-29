@@ -13,7 +13,7 @@ export const My_Projects = [
         details: AnimeHubDetails,
         demo: "",
         code: "", // https://github.com/Xraww/AnimeHub
-        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
+        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI", "Framer Motion", "Prisma", "PostgreSQL", "Better-Auth", "Resend", "Zod"],
         images: { // STILL IN DEVELOPMENT SO IT'S NOT DONE
             base_url: "/images/projects/anime-hub/",
             preview: "library/Library-Hero.png",
@@ -35,7 +35,7 @@ export const My_Projects = [
         details: LolTrackerDetails,
         demo: "",
         code: "https://github.com/Xraww/LolTracker",
-        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
+        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Riot API"],
         images: { 
             base_url: "/images/projects/lol-tracker/",
             preview: "profile/Profile.png",
@@ -55,7 +55,7 @@ export const My_Projects = [
         details: SneakersDetails,
         demo: "",
         code: "", // https://github.com/Xraww/Sneakers
-        stack: ["React", "Node.js", "Express", "MongoDB"],
+        stack: ["React", "Node.js", "Express", "MongoDB/Mongoose", "Cloudinary", "JsonWebToken", "Bcrypt", "Multer", "Nodemailer"],
         images: { 
             base_url: "/images/projects/sneakers/",
             preview: "landing/Landing-Hero.png",
@@ -72,7 +72,7 @@ export const My_Projects = [
         details: ConciergeServiceDetails,
         demo: "https://conciergerie-gilt.vercel.app/",
         code: "", // https://github.com/Xraww/Conciergerie
-        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
+        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI", "Framer Motion", "Leaflet"],
         images: { 
             base_url: "/images/projects/concierge-service/",
             preview: "landing/Landing-Hero.png",
@@ -87,7 +87,7 @@ export const My_Projects = [
         details: InvoiceMakerDetails,
         demo: "",
         code: "", // https://github.com/Xraww/InvoiceMaker
-        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
+        stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI", "html2pdf.js"], // html2pdf.js internally bundles html2canvas & jspdf
         images: {
             base_url: "/images/projects/invoice-maker/",
             preview: "landing/Preview.png",

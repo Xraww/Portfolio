@@ -1,7 +1,7 @@
 export default function SneakersDetails() {
     return (
-        <div>
+        <section>
             <h3>Sneakers</h3>
-        </div>
+        </section>
     )
 }

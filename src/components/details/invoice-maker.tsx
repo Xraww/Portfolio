@@ -1,7 +1,7 @@
 export default function InvoiceMakerDetails() {
     return (
-        <div>
+        <section>
             <h3>Invoice Maker</h3>
-        </div>
+        </section>
     )
 }

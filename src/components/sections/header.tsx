@@ -22,7 +22,7 @@ export default function Header() {
                     I'm a fullstack developer with a passion for creating beautiful and functional web applications. Always ready to learn & work hard.
                 </p>
 
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                     <Button variant="outline" size="sm" className="font-mono" asChild>
                         <Link href="https://github.com/Xraww" target="_blank">
                             GitHub
@@ -44,6 +44,12 @@ export default function Header() {
                     <Button variant="outline" size="sm" className="font-mono" asChild>
                         <Link href="mailto:contact.xraww@gmail.com" target="_blank">
                             Email
+                        </Link>
+                    </Button>
+
+                    <Button variant="outline" size="sm" className="font-mono" asChild>
+                        <Link href="/cv">
+                            CV
                         </Link>
                     </Button>
                 </div>

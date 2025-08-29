@@ -1,7 +1,7 @@
 export default function PortfolioDetails() {
     return (
-        <div>
+        <section>
             <h3>Portfolio</h3>
-        </div>
+        </section>
     )
 }

@@ -1,7 +1,7 @@
 export default function LolTrackerDetails() {
     return (
-        <div>
+        <section>
             <h3>League of Legends Tracker</h3>
-        </div>
+        </section>
     )
 }

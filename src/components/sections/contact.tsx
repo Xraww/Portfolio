@@ -35,7 +35,7 @@ export default function Contact() {
 
                 <div className="flex items-center gap-2 w-full">
                     <Button variant="outline" size="sm" className="flex-1 font-mono" asChild>
-                        <Link href="mailto:contact.xraww@gmail.com" target="_blank">
+                        <Link href="mailto:contact.xraww@gmail.com" target="_blank" className="text-xs md:text-sm">
                             contact.xraww@gmail.com
                         </Link>
                     </Button>
@@ -59,6 +59,12 @@ export default function Contact() {
                                 }`}
                             />
                         </div>
+                    </Button>
+
+                    <Button variant="outline" size="sm" className="font-mono" asChild>
+                        <Link href="/cv">
+                            CV
+                        </Link>
                     </Button>
                 </div>
             </div>

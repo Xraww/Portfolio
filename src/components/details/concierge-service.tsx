@@ -1,7 +1,9 @@
 export default function ConciergeServiceDetails() {
     return (
-        <div>
+        <section>
             <h3>Concierge Service</h3>
-        </div>
+
+            <p>Carefull: This project is still in development !</p>
+        </section>
     )
 }
