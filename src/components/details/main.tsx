@@ -1,52 +1,38 @@
-import { My_Projects } from "@/lib/projects";
-import { Github, ChevronRight, Eye, EyeOff, X } from "lucide-react";
+import { Project } from "@/lib/projects";
+import { Badge } from "@/components/ui/badge";
+import { stack_icons } from "@/lib/stack";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Github, ChevronRight, Eye, EyeOff } from "lucide-react";
 
-export default function AnimeHubDetails() {
-    const project = My_Projects.find((project) => project.id === "anime-hub");
-    const codeIsAvailable = project?.code !== "";
-    const demoIsAvailable = project?.demo !== "";
+export default function MainDetails(props: {project: Project, isInDevelopment: boolean}) {
+    const { project, isInDevelopment } = props;
+    const codeIsAvailable = project.code !== "";
+    const demoIsAvailable = project.demo !== "";
 
     return (
         <div className="flex flex-col gap-4">
-            <p className="text-sm font-sans text-center">This project is still in development !</p>
-            <p className="text-sm text-muted-foreground font-sans text-center">The images above are not the final product, but the current state of the project.</p>
+            {isInDevelopment && (
+                <>
+                    <p className="text-sm font-sans text-center">This project is still in development !</p>
+                    <p className="text-sm text-muted-foreground font-sans text-center">The images above are not the final product, but the current state of the project.</p>
+                </>
+            )}
 
             <section className="flex flex-col gap-4">
                 <h2 className="border-b pb-2 text-xl md:text-2xl font-semibold font-mono">Tech Stack</h2>
 
-                <div className="my-6 w-full overflow-y-auto">
-                    <table className="w-full">
-                        <tbody>
-                            {(() => {
-                                // Group technologies into rows of 3
-                                const rows = [];
-                                
-                                if (project?.stack) {
-                                    for (let i = 0; i < project.stack.length; i += 3) {
-                                        rows.push(project.stack.slice(i, i + 3));
-                                    }
-                                }
-                                
-                                return rows.map((row, idx) => (
-                                    <tr key={idx}>
-                                        <td className={`${row[0] ? "border" : "border-none"} px-4 py-2 text-left`}>
-                                            {row[0] || ""}
-                                        </td>
+                <div className="flex flex-wrap gap-2">
+                    {project?.stack.map((tech) => (
+                        <Badge key={tech} variant="outline" className="p-2 flex items-center gap-2">
+                            {stack_icons[tech as keyof typeof stack_icons] && (
+                                <Image src={stack_icons[tech as keyof typeof stack_icons]} alt={tech} width={16} height={16} className="rounded-sm"/>
+                            )}
 
-                                        <td className={`${row[1] ? "border" : "border-none"} px-4 py-2 text-left`}>
-                                            {row[1] || ""}
-                                        </td>
-
-                                        <td className={`${row[2] ? "border" : "border-none"} px-4 py-2 text-left`}>
-                                            {row[2] || ""}
-                                        </td>
-                                    </tr>
-                                ));
-                            })()}
-                        </tbody>
-                    </table>
+                            {tech}  
+                        </Badge>    
+                    ))}
                 </div>
             </section>
 
@@ -88,6 +74,14 @@ export default function AnimeHubDetails() {
 
             <section className="flex flex-col gap-4">
                 <h3 className="border-b pb-2 text-xl md:text-2xl font-semibold font-mono">Features</h3>
+
+                <div className="border p-4 rounded-lg">
+                    <ul className="ml-6 list-disc [&>li]:mt-2">
+                        {project?.features?.map((feature) => (
+                            <li key={feature} className="font-sans font-light">{feature}</li>
+                        ))}
+                    </ul>
+                </div>
             </section>
         </div>
     )

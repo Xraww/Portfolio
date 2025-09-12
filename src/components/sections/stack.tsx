@@ -1,7 +1,7 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@radix-ui/react-hover-card";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { My_Stack } from "../../lib/stack"
+import { My_Stack, stack_icons } from "../../lib/stack"
 
 export default function Stack() {
     return (
@@ -16,7 +16,7 @@ export default function Stack() {
                         <HoverCard>
                             <div className="flex items-center gap-2">
                                 <Avatar className="w-6 h-6">
-                                    <AvatarImage src={item.icon} />
+                                    <AvatarImage src={stack_icons[item.name as keyof typeof stack_icons]}/> 
                                     <AvatarFallback>{item.name}</AvatarFallback>
                                 </Avatar>
                                 
@@ -36,7 +36,7 @@ export default function Stack() {
                             <HoverCardContent className="w-72 bg-background p-4 rounded-lg border ml-4 md:ml-40 z-5 sm:bg-card">
                                 <div className="flex justify-between items-center gap-4">
                                     <Avatar>
-                                        <AvatarImage src={item.icon} />
+                                        <AvatarImage src={stack_icons[item.name as keyof typeof stack_icons]}/> 
                                         <AvatarFallback>{item.name}</AvatarFallback>
                                     </Avatar>
 

@@ -1,16 +1,35 @@
-import AnimeHubDetails from "@/components/details/anime-hub";
-import LolTrackerDetails from "@/components/details/lol-tracker";
-import SneakersDetails from "@/components/details/sneakers";
-import ConciergeServiceDetails from "@/components/details/concierge-service";
-import InvoiceMakerDetails from "@/components/details/invoice-maker";
-import PortfolioDetails from "@/components/details/portfolio";
+export type ImageMap = {
+    [key: string]: string | string[] | ImageMap | undefined;
+}
+
+export interface Project {
+    id: string;
+    name: string;
+    description: string;
+    features?: string[];
+    demo?: string;
+    code?: string;
+    stack: string[];
+    images?: ImageMap;
+    pinned: boolean;
+    isInDevelopment: boolean;
+}
 
 export const My_Projects = [
     {
         id: "anime-hub",
         name: "Anime Hub",
         description: "Search for anime and manga, with a profile system, a watchlist and more...",
-        details: AnimeHubDetails,
+        features: [
+            "Search for anime and manga", 
+            "Anime & Manga Library with filters", 
+            "Media pages with overview, stats, schedule, characters and staff",
+            "Watchlist", 
+            "Profile card", 
+            "Authentication system with email and Google",
+            "Games section with quiz and more... (Not implemented yet)",
+            "Community section with a forum, fanart gallery and more... (Not implemented yet)",
+        ],
         demo: "",
         code: "", // https://github.com/Xraww/AnimeHub
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI", "Framer Motion", "Prisma", "PostgreSQL", "Better-Auth", "Resend", "Zod"],
@@ -27,12 +46,22 @@ export const My_Projects = [
             media_staff: ["staff-production.png", "staff-studios.png", "staff-va.png"],
         },
         pinned: true,
+        isInDevelopment: true,
     },
     {
         id: "lol-tracker",
         name: "League of Legends Tracker",
         description: "Search for players, stats and more about League of Legends...",
-        details: LolTrackerDetails,
+        features: [
+            "Search for players", 
+            "Search for items", 
+            "Search for champions", 
+            "Profile page with overview, match history, most played and masteries", 
+            "Champion details page with stats, abilities, lore and more", 
+            "Item details page with stats and lore", 
+            "Landing page with hero, features, stats and footer", 
+            "Leaderboard page with top players", 
+        ],
         demo: "",
         code: "https://github.com/Xraww/LolTracker",
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Riot API"],
@@ -47,12 +76,17 @@ export const My_Projects = [
             searchPlayer: ["Search-Player.png", "Search-Player-Result.png"],
         },
         pinned: true,
+        isInDevelopment: false,
     },
     {
         id: "sneakers",
         name: "Sneakers",
         description: "Manage a sneakers collection with admin panel and more...",
-        details: SneakersDetails,
+        features: [
+            "Landing page with hero, new arrivals, story, quality and contact", 
+            "Collection page with sneakers, contact and filters", 
+            "Admin panel with dashboard, login, add and edit sneakers", 
+        ],
         demo: "",
         code: "", // https://github.com/Xraww/Sneakers
         stack: ["React", "Node.js", "Express", "MongoDB/Mongoose", "Cloudinary", "JsonWebToken", "Bcrypt", "Multer", "Nodemailer"],
@@ -64,12 +98,16 @@ export const My_Projects = [
             admin: ["Admin-Dashboard.png", "Admin-Login.png", "Admin-Add-Modal.png", "Admin-Edit-Modal.png"],
         },
         pinned: true,
+        isInDevelopment: false,
     },
     {
         id: "concierge",
         name: "Concierge service",
         description: "Landing page for the concierge service of a friend's business...",
-        details: ConciergeServiceDetails,
+        features: [
+            "Landing page with hero, services, faq and contact", 
+            "Dynamic map with locations", 
+        ],
         demo: "https://conciergerie-gilt.vercel.app/",
         code: "", // https://github.com/Xraww/Conciergerie
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI", "Framer Motion", "Leaflet"],
@@ -79,12 +117,18 @@ export const My_Projects = [
             landing: ["Landing-Hero.png", "Landing-Services.png", "Landing-Faq.png", "Landing-Contact.png"],
         },
         pinned: false,
+        isInDevelopment: false,
     },
     {
         id: "invoice-maker",
         name: "Invoice Maker",
         description: "Create invoices for a friend's business using a form and handle PDF export...",
-        details: InvoiceMakerDetails,
+        features: [
+            "Create invoices for a friend's business using a form and handle PDF export...", 
+            "Form page with client, company, services on the left side of the page",
+            "Previsualization page on the right side of the form",
+            "Login page with password", 
+        ],
         demo: "",
         code: "", // https://github.com/Xraww/InvoiceMaker
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI", "html2pdf.js"], // html2pdf.js internally bundles html2canvas & jspdf
@@ -97,12 +141,18 @@ export const My_Projects = [
             previsualization: ["Prev-Completed.png", "Prev-Not-Completed.png"],
         },
         pinned: false,
+        isInDevelopment: false,
     },
     {
         id: "portfolio",
         name: "Portfolio",
         description: "My personal portfolio website, with my projects and information about me...",
-        details: PortfolioDetails,
+        features: [
+            "Landing page with hero, projects, about me and contact", 
+            "Projects page with projects list", 
+            "Project details page with project details", 
+            "CV page with export to PDF functionality", 
+        ],
         demo: "https://xraww.fr",
         code: "", // https://github.com/Xraww/Portfolio
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
@@ -112,5 +162,6 @@ export const My_Projects = [
             landing: ["Landing.png"],
         },
         pinned: false,
+        isInDevelopment: false,
     },
 ]

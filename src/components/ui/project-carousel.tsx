@@ -5,23 +5,8 @@ import { useEffect, useState } from "react";
 import { Button } from "./button";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi, } from "./carousel";
 import Image from "next/image";
-import { X } from "lucide-react";
-
-type ImageMap = {
-    [key: string]: string | string[] | ImageMap | undefined;
-}
-
-interface Project {
-    id: string;
-    name: string;
-    description: string;
-    details?: React.ComponentType | React.ReactNode;
-    demo?: string;
-    code?: string;
-    stack: string[];
-    images?: ImageMap;
-    pinned: boolean;
-}
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Project } from "@/lib/projects";
 
 export default function ProjectCarousel(props: {categories: string[], project: Project}) {
     const { categories, project } = props;
@@ -41,12 +26,6 @@ export default function ProjectCarousel(props: {categories: string[], project: P
         api.on("select", () => {
             setCurrent(api.selectedScrollSnap())
         })
-
-        const interval = setInterval(() => {
-            api.scrollNext();
-        }, 5000);
-
-        return () => clearInterval(interval);
     }, [api])
     
     return (
@@ -57,7 +36,6 @@ export default function ProjectCarousel(props: {categories: string[], project: P
                         <div key={category} className="w-full md:w-auto">
                             <Button variant={activeCategory === category ? "default" : "outline"} className="w-full md:w-auto cursor-pointer" onClick={() => {
                                 setActiveCategory(category);
-                                setCurrent(0);
                             }}>{category.includes("media") ? category.charAt(0).toUpperCase() + category.slice(1).replace("_", " ") : category.charAt(0).toUpperCase() + category.slice(1)}</Button>
                         </div>
                     ) : null
@@ -67,9 +45,7 @@ export default function ProjectCarousel(props: {categories: string[], project: P
             <p className="text-sm text-muted-foreground text-center md:hidden">Click on the image to view it in full screen !</p>
 
             <div className="flex flex-col gap-4">
-                <Carousel setApi={setApi} className="border rounded-lg" opts={{
-                    loop: true
-                }}>
+                <Carousel setApi={setApi} className="border rounded-lg">
                     <CarouselContent>
                         {Array.isArray(project.images?.[activeCategory]) &&
                             project.images![activeCategory].map((image: string, index: number) => (
@@ -89,23 +65,50 @@ export default function ProjectCarousel(props: {categories: string[], project: P
                     </CarouselContent>
                 </Carousel>
 
-                <div className="flex justify-center gap-2">
-                    {Array.isArray(project.images?.[activeCategory]) &&
-                        project.images?.[activeCategory]?.map((_, index) => (
-                            <Button
-                                key={index}
-                                size="icon"
-                                className={`w-2 h-2 rounded-full transition-colors cursor-pointer ${
-                                    current === index ? 'bg-primary' : 'bg-muted'
-                                } hover:bg-primary/80`}
-                                onClick={() => {
-                                    setCurrent(index)
-                                    api?.scrollTo(index)
-                                }}
-                            />
-                        ))
-                    }
-                </div>
+                {Array.isArray(project.images?.[activeCategory]) && project.images?.[activeCategory]?.length > 1 && (
+                    <div className="flex items-center justify-center gap-4">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            disabled={current === 0}
+                            className="cursor-pointer h-8 w-8"
+                            onClick={() => {
+                                api?.scrollPrev()
+                            }}
+                        >
+                            <ChevronLeft className="h-3 w-3" />
+                        </Button>
+
+                        <div className="flex gap-2">
+                            {project.images?.[activeCategory]?.map((_, index) => (
+                                <Button
+                                    key={index}
+                                    size="icon"
+                                    className={`w-2 h-2 rounded-full transition-colors cursor-pointer ${
+                                        current === index ? 'bg-primary' : 'bg-muted'
+                                    } hover:bg-primary/80`}
+                                    onClick={() => {
+                                        setCurrent(index)
+                                        api?.scrollTo(index)
+                                    }}
+                                />
+                            ))
+                        }
+                        </div>
+
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            disabled={current === project.images?.[activeCategory]?.length - 1}
+                            className="cursor-pointer h-8 w-8"
+                            onClick={() => {
+                                api?.scrollNext()
+                            }}
+                        >
+                            <ChevronRight className="h-3 w-3" />
+                        </Button>
+                    </div>
+                )}
             </div>
 
             {selectedImage && (
