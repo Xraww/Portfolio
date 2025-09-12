@@ -44,7 +44,7 @@ export default async function Project(props: {params: Promise<{ id: string }>}) 
     const categories = Object.keys(project.images || {});
 
     return (
-        <>
+        <div className="md:max-w-[640px] md:mx-auto">
             <section className="flex flex-col gap-4 mx-4 md:mx-0 my-4">
                 <GotoButton href="/projects" text="Back to projects" type="back"/>
                 <h1 className="border-b pb-2 text-2xl md:text-3xl font-semibold font-mono">{project.name}</h1>
@@ -66,6 +66,6 @@ export default async function Project(props: {params: Promise<{ id: string }>}) 
             </section>
 
             <Footer/>
-        </>
+        </div>
     )
 }

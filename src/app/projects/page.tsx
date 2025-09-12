@@ -3,6 +3,7 @@
 import { My_Projects } from "../../lib/projects"
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { Badge } from "../../components/ui/badge";
 import { Plus } from "lucide-react";
 import GotoButton from "@/components/ui/goto-button";
@@ -12,7 +13,7 @@ export default function Projects() {
     const router = useRouter();
 
     return (
-        <>
+        <div className="max-w-[640px] mx-auto">
             <section className="flex flex-col gap-4 mx-4 md:mx-0 my-4">
                 <GotoButton href="/" text="Back to Home" type="back"/>
 
@@ -26,12 +27,10 @@ export default function Projects() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                     {My_Projects.map((project) => (
-                        <div 
+                        <Link 
                             key={project.id} 
+                            href={`/projects/${project.id}`}
                             className="group rounded-md cursor-pointer bg-gradient-to-br from-background to-accent/20 hover:bg-accent/50 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 h-full flex flex-col"
-                            onClick={() => {
-                                router.push(`/projects/${project.id}`);
-                            }}
                         >
                             <div className="flex flex-col h-full">
                                 <Image 
@@ -68,7 +67,7 @@ export default function Projects() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
 
                     <div className="group relative overflow-hidden rounded-md cursor-pointer hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-gradient-to-br from-background to-accent/20 h-full flex flex-col">
@@ -100,6 +99,6 @@ export default function Projects() {
             </section>
             
             <Footer/>
-        </>
+        </div>
     )
 }

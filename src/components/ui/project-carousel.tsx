@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./button";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi, } from "./carousel";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { Project } from "@/lib/projects";
 
 export default function ProjectCarousel(props: {categories: string[], project: Project}) {
@@ -116,15 +116,35 @@ export default function ProjectCarousel(props: {categories: string[], project: P
                     className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
                     onClick={() => setSelectedImage(null)}
                 >
-                    <div className="relative max-w-[90vw] max-h-[90vh]">
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => setSelectedImage(null)}
-                            className="absolute -top-12 right-0 text-white bg-accent cursor-pointer hover:text-gray-300 transition-colors"
-                        >
-                            <X size={24}/>
-                        </Button>
+                    <div className="relative max-w-[80vw] max-h-[80vh] lg:max-w-[70vw] lg:max-h-[70vh]">
+                        <div className="absolute -top-12 right-0 flex gap-2">
+                            <Button
+                                variant="link"
+                                size="sm"
+                                onClick={() => window.open(selectedImage, '_blank')}
+                                className="hidden md:block bg-accent text-white cursor-pointer hover:text-gray-300 transition-colors"
+                            >
+                                <p className="flex items-center gap-2">See the image in another tab to see it better <ExternalLink size={24}/></p>
+                            </Button>
+
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={() => window.open(selectedImage, '_blank')}
+                                className="md:hidden text-white bg-accent cursor-pointer hover:text-gray-300 transition-colors"
+                            >
+                                <ExternalLink size={24}/>
+                            </Button>
+
+                            <Button
+                                variant="destructive"
+                                size="sm"
+                                onClick={() => setSelectedImage(null)}
+                                className="text-white bg-accent cursor-pointer hover:text-gray-300 transition-colors"
+                            >
+                                <X size={24}/>
+                            </Button>
+                        </div>
 
                         <Image
                             src={selectedImage}
@@ -135,9 +155,9 @@ export default function ProjectCarousel(props: {categories: string[], project: P
                             unoptimized={true}
                             onClick={(e) => e.stopPropagation()}
                         />
-                     </div>
-                 </div>
-             )}
-         </div>
-     )
- }
+                    </div>
+                </div>
+            )}
+        </div>
+    )
+}

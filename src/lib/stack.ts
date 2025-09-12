@@ -69,7 +69,7 @@ export const My_Stack = [
     },
     {
         name: "Lua",
-        sentence: "Useless here but I can also write code in Lua",
+        sentence: "It's the first programming language I learned",
         description: "The programming language created and maintained by @lua.",
     }
 ]

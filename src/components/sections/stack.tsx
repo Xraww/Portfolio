@@ -1,4 +1,4 @@
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@radix-ui/react-hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { My_Stack, stack_icons } from "../../lib/stack"
@@ -22,7 +22,7 @@ export default function Stack() {
                                 
                                 <div className="flex flex-col items-start">
                                     <HoverCardTrigger asChild>
-                                        <Button variant="link" className="cursor-pointer active:bg-muted/20 sm:active:bg-transparent rounded px-1 font-mono">
+                                        <Button variant="link" className="cursor-pointer active:bg-muted/20 sm:active:bg-transparent rounded p-0 font-mono">
                                             @{item.name}
                                         </Button>
                                     </HoverCardTrigger>
