@@ -17,13 +17,19 @@ export const stack_icons = {
     "Node.js": "https://imgs.search.brave.com/xr5jdZ1Q2-ftVodEl7g4fzGVcDZAkHvOmKZvFcjzEQM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWVjYzk4ZTM0/ZmZiZDUwNDk0YzA0/ZDk0NzQzNDk3NjI3/NDBhMjY1YzdjZWI0/ZjUxZGMxYzUzODIz/MjliMGI3ZS9ub2Rl/anMub3JnLw",
     "Express": "https://imgs.search.brave.com/sFAukgJD-nbgqVp-6HA0hWnCXZ9QoE2guQ5ygS-ZowU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y4YmU0NGQ3/ODQyMGE1YzhiZjZi/NTI1MzAzNDkzY2Rk/NmI2YzcyNGU1M2Fl/NjZmZDhlMWIyY2Y1/M2Q2ODExMS9leHBy/ZXNzanMuY29tLw",
     "MongoDB/Mongoose": "https://imgs.search.brave.com/TsqrtlDA4NO1jpqvgAHLupPWWIo47Oq94kHCiq2M0MU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGY1MjYxZjhm/ZDJmMzEyMTllNDMz/MmZhZjhiNmRiMzI5/OTU4YzMzM2NmZTI3/NGM2NWIxYmRkMGYx/ODc5YTAzOC93d3cu/bW9uZ29kYi5jb20v",
+    "MongoDB": "https://imgs.search.brave.com/TsqrtlDA4NO1jpqvgAHLupPWWIo47Oq94kHCiq2M0MU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGY1MjYxZjhm/ZDJmMzEyMTllNDMz/MmZhZjhiNmRiMzI5/OTU4YzMzM2NmZTI3/NGM2NWIxYmRkMGYx/ODc5YTAzOC93d3cu/bW9uZ29kYi5jb20v",
     "Cloudinary": "https://imgs.search.brave.com/5fKsZ18fESxmVKGXvo6glcSSwXPICQ_QR3PBRlAPZu4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWU4NDZmNDY4/Y2ZkOTc3YjJmOGZh/OTdhYTg5NTk4MzFi/N2Y0N2M4NGQyZmU0/M2QyNmFjNGY1Nzc2/MTExYjI4MC9jbG91/ZGluYXJ5LmNvbS8",
     "JsonWebToken": "https://avatars.githubusercontent.com/u/2824157?s=48&v=4",
     "Bcrypt": "https://avatars.githubusercontent.com/u/1136893?s=48&v=4",
     "Multer": "https://avatars.githubusercontent.com/u/5658226?s=48&v=4",
     "Nodemailer": "https://avatars.githubusercontent.com/u/16486629?s=48&v=4",
     "Leaflet": "https://leafletjs.com/docs/images/logo.png",
-    "html2pdf.js": "https://imgs.search.brave.com/129PsExJCizx2_pC-7e4exnT1C0gWE4PUinIWjrXr-4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzg1ZTZiOGFm/M2NhY2JjMmE1NmJl/ZTRlODIwNDVhZWIy/OWRjZDgzYjYyYjcw/NjhmNzQzMWM0NDBk/Y2U3MGIzMi93d3cu/bnBtanMuY29tLw"
+    "html2pdf.js": "https://imgs.search.brave.com/129PsExJCizx2_pC-7e4exnT1C0gWE4PUinIWjrXr-4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzg1ZTZiOGFm/M2NhY2JjMmE1NmJl/ZTRlODIwNDVhZWIy/OWRjZDgzYjYyYjcw/NjhmNzQzMWM0NDBk/Y2U3MGIzMi93d3cu/bnBtanMuY29tLw",
+    "APIs REST": "https://imgs.search.brave.com/129PsExJCizx2_pC-7e4exnT1C0gWE4PUinIWjrXr-4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzg1ZTZiOGFm/M2NhY2JjMmE1NmJl/ZTRlODIwNDVhZWIy/OWRjZDgzYjYyYjcw/NjhmNzQzMWM0NDBk/Y2U3MGIzMi93d3cu/bnBtanMuY29tLw",
+    "Git / GitHub": "https://avatars.githubusercontent.com/u/18133?s=48&v=4",
+    "Postman": "https://imgs.search.brave.com/UVOEFJOZw3ZdGpU5Xw2bRS3j_wWnM7RoV1AWgR51ZIE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hdmF0/YXJzLmdpdGh1YnVz/ZXJjb250ZW50LmNv/bS91LzEwMjUxMDYw/P3M9MjAwJmFtcDt2/PTQ",
+    "MySQL": "https://imgs.search.brave.com/R_Cb5ma_h8Nc9KQwNZDGoujYECBqD9F1mnP5agUW1Ec/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTgzODEwNGFl/ZWFhNjJkY2Q5ZWFi/MDA1YTRlZGM4ZmRj/NTZkZjY5ZDM5ZTU3/ZTAwMWZiMWZlNmM3/ZDRhZGEyOC93d3cu/bXlzcWwuY29tLw",
+    "Claude Code": "https://imgs.search.brave.com/GWjaTV9oDpq1Je9ium8eyNBhR4UvPfZUchUjSllz4rI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTczMzdhMjk1/MjZkMGQ0YWFmNzE1/NjZhM2U4MDQzMjc5/OThlZDkyNTlhOGVh/Zjg4Mzk2MTIxOGFh/ZjkxYjdmYy9jbGF1/ZGUuYWkv",
 }
 
 export const My_Stack = [
@@ -69,7 +75,186 @@ export const My_Stack = [
     },
     {
         name: "Lua",
-        sentence: "It's the first programming language I learned",
+        sentence: "It's the first programming language I learned at 13 years old by modding GTA V, creating scripts and new game modes with Lua on FiveM.",
         description: "The programming language created and maintained by @lua.",
     }
 ]
+
+export const My_Stack_CV = {
+    frontend: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+    ],
+    backend: [
+        "Node.js",
+        "Prisma",
+        "PostgreSQL",
+        "MongoDB",
+        "APIs REST",
+        "MySQL",
+    ],
+    tools: [
+        "Git / GitHub",
+        "Cursor",
+        "Postman",
+        "Lua",
+        // "Claude Code",
+    ],
+}
+
+export const Soft_Skills= {
+    en: [
+        "Autonomy & self-motivation",
+        "Adaptability to new technologies",
+        "Problem-solving & debugging",
+        "Proactivity",
+        "Attention to detail",
+        "Continuous learning mindset",
+
+    ],
+    fr: [
+        "Autonomie et motivation personnelle",
+        "Adaptabilité aux nouvelles technologies",
+        "Résolution de problèmes et débogage",
+        "Proactivité",
+        "Attention aux détails",
+        "Esprit d'apprentissage continu",
+    ],
+}
+
+export const My_Experience = [
+    {
+        job: {
+            en: "Junior Fullstack Developer",
+            fr: "Développeur Fullstack Junior",
+        },
+        date: "2025",
+        company: {
+            en: "Freelance - Sneakers",
+            fr: "Freelance - Sneakers",
+        },
+        description: {
+            en: "Developed a web application to manage a sneakers collection, including an admin panel for a reseller.",
+            fr: "Développement d'une application web pour gérer une collection de sneakers, incluant un panneau d'administration pour un revendeur.",
+        },
+    },
+    {
+        job: {
+            en: "Junior Fullstack Developer",
+            fr: "Développeur Fullstack Junior",
+        },
+        date: "2025",
+        company: {
+            en: "Freelance - Concierge service",
+            fr: "Freelance - Service de conciergerie",
+        },
+        description: {
+            en: "Created a responsive landing page for a concierge service business.",
+            fr: "Création d'une landing page responsive pour une entreprise de conciergerie.",
+        },
+    },
+    {
+        job: {
+            en: "Junior Fullstack Developer",
+            fr: "Développeur Fullstack Junior",
+        },
+        date: "2025",
+        company: {
+            en: "Anime Hub - Self-Employed",
+            fr: "Anime Hub - Indépendant",
+        },
+        description: {
+            en: "Building and maintaining a personal project: an interactive platform for anime & manga fans.",
+            fr: "Développement et maintenance d'un projet personnel : une plateforme interactive pour les passionnés d'anime/manga.",
+        },
+    },
+    {
+        job: {
+            en: "Script Developer (Lua)",
+            fr: "Développeur de scripts (Lua)",
+        },
+        date: "2018 - 2022",
+        company: {
+            en: "Self-Employed",
+            fr: "Indépendant",
+        },
+        description: {
+            en: "Designed and sold custom scripts and new game modes on the FiveM platform (GTA V modding). Strengthened skills in programming logic, real-time systems, and client/server communication.",
+            fr: "Conception et vente de scripts personnalisés et de nouveaux modes de jeu sur la plateforme FiveM (modding GTA V). Développement de compétences en logique de programmation, systèmes temps réel et communication client/serveur.",
+        },
+    },
+]
+
+export const My_Education = [
+    {
+        name: {
+            en: "Programming Foundations (Lua / Game Modding)",
+            fr: "Bases de la programmation (Lua / Modding de jeu)",
+        },
+        date: {
+            en: "Autodidact: 2018 - 2022",
+            fr: "Autodidacte: 2018 - 2022",
+        },
+        description: {
+            en: "Started programming at 13 by creating custom scripts and game modes for GTA V with Lua. Gained strong foundations in problem-solving, code structure, and real-time applications.",
+            fr: "Début de la programmation à 13 ans en créant des scripts et modes de jeu personnalisés pour GTA V avec Lua. Acquisition de bases solides en résolution de problèmes, structuration du code et applications temps réel.",
+        },
+    },
+    {
+        name: {
+            en: "Web Development",
+            fr: "Développement web",
+        },
+        date: {
+            en: "Autodidact: 2023 - Present",
+            fr: "Autodidacte: 2023 - Présent",
+        },
+        description: {
+            en: "Self-taught through official documentation, tutorials, and real-world projects. Specialized in React, Next.js, TypeScript, and Tailwind CSS.",
+            fr: "Autodidacte via les documentations officielles, les tutoriels et des projets concrets. Spécialisation en React, Next.js, TypeScript et Tailwind CSS.",
+        },
+    },
+]
+
+export const CV_Translation = {
+    job: {
+        en: "Junior Fullstack Developer",
+        fr: "Développeur Fullstack Junior",
+    },
+    description: {
+        en: "I'm building web applications. Always ready to learn & work hard.",
+        fr: "Je développe des applications web. Toujours prêt à apprendre et à travailler dur.",
+    },
+    skills: {
+        frontend: {
+            en: "Frontend Skills",
+            fr: "Compétences Frontend",
+        },
+        backend: {
+            en: "Backend Skills",
+            fr: "Compétences Backend",
+        },
+        tools: {
+            en: "Tools / Other Skills",
+            fr: "Outils / Autre",
+        },
+        other: {
+            en: "Soft Skills",
+            fr: "Soft Skills",
+        },
+    },
+    experience: {
+        en: "Experience",
+        fr: "Expérience",
+    },
+    education: {
+        en: "Education",
+        fr: "Formation",
+    },
+    download: {
+        en: "Download CV",
+        fr: "Télécharger le CV",
+    },
+}

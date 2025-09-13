@@ -10,7 +10,7 @@ export default function Stack() {
                 What I use
             </h2>
 
-            <ul className="flex flex-col gap-4 p-4 rounded-lg bg-card border sm:bg-transparent">
+            <ul className="flex flex-col gap-4 p-4 rounded-lg border">
                 {My_Stack.map((item) => (
                     <li key={item.name}>
                         <HoverCard>
@@ -33,7 +33,7 @@ export default function Stack() {
                                 </div>
                             </div>
 
-                            <HoverCardContent className="w-72 bg-background p-4 rounded-lg border ml-4 md:ml-40 z-5 sm:bg-card">
+                            <HoverCardContent className="w-72 bg-card p-4 rounded-lg border ml-4 md:ml-40 z-5">
                                 <div className="flex justify-between items-center gap-4">
                                     <Avatar>
                                         <AvatarImage src={stack_icons[item.name as keyof typeof stack_icons]}/> 
@@ -53,3 +53,131 @@ export default function Stack() {
         </section>
     );
 }
+
+// TODO: Add the collapsible component to the stack section but keep the same style with the hover card etc...
+
+{/* <div className="flex flex-col gap-4">
+<Collapsible className="w-full" defaultOpen={true}>
+    <CollapsibleTrigger className="flex items-center justify-between w-full border-b pb-2 text-md font-semibold font-mono">
+        Frontend
+        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+    </CollapsibleTrigger>
+    
+    <CollapsibleContent className="mt-3">
+        <div className="flex flex-wrap gap-2">
+            {My_Stack_CV.frontend.map((skill: string) => (
+                <Badge
+                    key={skill}
+                    variant="outline"
+                    className="p-2 flex items-center gap-2"
+                >
+                    {stack_icons[skill as keyof typeof stack_icons] && (
+                        <Image
+                            src={stack_icons[skill as keyof typeof stack_icons]}
+                            alt={skill}
+                            width={16}
+                            height={16}
+                            className="rounded-sm"
+                        />
+                    )}
+                    
+                    {skill}
+                </Badge>
+            ))}
+        </div>
+    </CollapsibleContent>
+</Collapsible>
+
+<Collapsible className="w-full">
+    <CollapsibleTrigger className="flex items-center justify-between w-full border-b pb-2 text-md font-semibold font-mono">
+        Backend
+        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+    </CollapsibleTrigger>
+    
+    <CollapsibleContent className="mt-3">
+        <div className="flex flex-wrap gap-2">
+            {My_Stack_CV.backend.map((skill: string) => (
+                <Badge
+                    key={skill}
+                    variant="outline"
+                    className="p-2 flex items-center gap-2"
+                >
+                    {stack_icons[skill as keyof typeof stack_icons] && (
+                        <Image
+                            src={stack_icons[skill as keyof typeof stack_icons]}
+                            alt={skill}
+                            width={16}
+                            height={16}
+                            className="rounded-sm"
+                        />
+                    )}
+
+                    {skill}
+                </Badge>
+            ))}
+        </div>
+    </CollapsibleContent>
+</Collapsible>
+
+<Collapsible className="w-full">
+    <CollapsibleTrigger className="flex items-center justify-between w-full border-b pb-2 text-md font-semibold font-mono">
+        Tools
+        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+    </CollapsibleTrigger>
+    
+    <CollapsibleContent className="mt-3">
+        <div className="flex flex-wrap gap-2">
+            {My_Stack_CV.tools.map((skill: string) => (
+                <Badge
+                    key={skill}
+                    variant="outline"
+                    className="p-2 flex items-center gap-2"
+                >
+                    {stack_icons[skill as keyof typeof stack_icons] && (
+                        <Image
+                            src={stack_icons[skill as keyof typeof stack_icons]}
+                            alt={skill}
+                            width={16}
+                            height={16}
+                            className="rounded-sm"
+                        />
+                    )}
+                    
+                    {skill}
+                </Badge>
+            ))}
+        </div>
+    </CollapsibleContent>
+</Collapsible>
+
+<Collapsible className="w-full">
+    <CollapsibleTrigger className="flex items-center justify-between w-full border-b pb-2 text-md font-semibold font-mono">
+        Other
+        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+    </CollapsibleTrigger>
+    
+    <CollapsibleContent className="mt-3">
+        <div className="flex flex-wrap gap-2">
+            {My_Stack_CV.other.map((skill: string) => (
+                <Badge
+                    key={skill}
+                    variant="outline"
+                    className="p-2 flex items-center gap-2"
+                >
+                    {stack_icons[skill as keyof typeof stack_icons] && (
+                        <Image
+                            src={stack_icons[skill as keyof typeof stack_icons]}
+                            alt={skill}
+                            width={16}
+                            height={16}
+                            className="rounded-sm"
+                        />
+                    )}
+                    
+                    {skill}
+                </Badge>
+            ))}
+        </div>
+    </CollapsibleContent>
+</Collapsible>
+</div> */}
