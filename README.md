@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio v3 - Alexis Bonzi
 
-## Getting Started
+A modern, responsive portfolio website showcasing my work as a fullstack developer. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🌟 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Visit the live portfolio: [https://xraww.fr](https://xraww.fr)
+
+## 📋 Features
+
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Modern Tech Stack**: Next.js 15, React 19, TypeScript
+- **SEO Optimized**: Meta tags, Open Graph, Twitter Cards, and structured data
+- **Project Showcase**: Detailed project pages with image galleries
+- **CV Export**: PDF generation functionality for CV download
+- **Dark Theme**: Built-in dark mode support
+- **Performance**: Optimized with Next.js App Router and Turbopack
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Next.js 15** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **Shadcn/ui** - Component library
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
+
+### Backend & Database
+- **Prisma** - Database ORM
+- **PostgreSQL** - Primary database
+- **MongoDB** - NoSQL database
+- **Node.js** - Runtime environment
+- **Express** - Web framework
+
+### Tools & Services
+- **Vercel** - Deployment platform
+- **Better-Auth** - Authentication
+- **Resend** - Email service
+- **Cloudinary** - Image management
+- **html2pdf.js** - PDF generation
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- pnpm (recommended) or npm
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── api/               # API routes
+│   ├── cv/                # CV page
+│   ├── projects/          # Projects pages
+│   └── layout.tsx         # Root layout
+├── components/            # React components
+│   ├── sections/          # Page sections
+│   ├── ui/                # Reusable UI components
+│   └── details/           # Project detail components
+└── lib/                   # Utilities and data
+    ├── projects.ts        # Project data
+    ├── stack.ts           # Tech stack data
+    └── utils.ts           # Helper functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Header**: Profile information and social links
+- **CanDo**: Skills and capabilities section
+- **Stack**: Technology stack showcase
+- **Projects**: Featured projects with carousel
+- **AboutMe**: Personal information
+- **Contact**: Contact form and information
+- **Footer**: Additional links and information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Responsive Design
 
-## Learn More
+The portfolio is built with a mobile-first approach:
+- Optimized for mobile devices (320px+)
+- Responsive breakpoints for tablet and desktop
+- Touch-friendly interface elements
+- Optimized images and performance
 
-To learn more about Next.js, take a look at the following resources:
+## 📊 SEO Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Meta Tags**: Comprehensive meta information
+- **Open Graph**: Social media sharing optimization
+- **Twitter Cards**: Twitter sharing optimization
+- **Structured Data**: JSON-LD schema markup
+- **Sitemap**: Automatic sitemap generation
+- **Robots.txt**: Search engine directives
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Projects Showcase
 
-## Deploy on Vercel
+The portfolio features several projects including:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Anime Hub** - Interactive anime/manga platform (In Development)
+2. **League of Legends Tracker** - Player stats and champion database
+3. **Sneakers Collection** - E-commerce with admin panel
+4. **Concierge Service** - Business landing page
+5. **Invoice Maker** - PDF invoice generation tool
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+The project is deployed on Vercel with automatic deployments from the main branch.
+
+## 📄 License
+
+This project is private and proprietary.
+
+## 👨‍💻 Author
+
+**Alexis Bonzi** (Xraww)
+- GitHub: [@Xraww](https://github.com/Xraww)
+- LinkedIn: [Alexis Bonzi](https://www.linkedin.com/in/xraww/)
+- Twitter: [@Xraaww](https://x.com/Xraaww)
+- Email: contact.xraww@gmail.com
+
+## 🤝 Contributing
+
+This is a personal portfolio project. If you have any questions, please feel free to reach out via email or social media.
+
+---
+
+Built with ❤️ using Next.js, TypeScript, and Tailwind CSS

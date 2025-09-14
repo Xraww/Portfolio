@@ -154,7 +154,7 @@ export const My_Projects = [
             "CV page with export to PDF functionality", 
         ],
         demo: "https://xraww.fr",
-        code: "", // https://github.com/Xraww/Portfolio
+        code: "https://github.com/Xraww/Portfolio",
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
         images: { // TODO: TAKE IMAGES WHEN DONE
             base_url: "/images/projects/portfolio/",
