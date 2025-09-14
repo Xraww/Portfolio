@@ -15,7 +15,7 @@ export default function AboutMe() {
                     </div>
                     
                     <div className="p-4 text-sm font-mono space-y-1">
-                        <div className="text-muted-foreground">// TODO: Look for a job</div>
+                        <div className="text-muted-foreground">{'// TODO: Look for a job'}</div>
 
                         <br/>
 
@@ -25,26 +25,26 @@ export default function AboutMe() {
 
                         <div className="pl-4">
                             <span className="text-muted-foreground">username: </span>
-                            <span>"Xraww"</span>
+                            <span>&quot;Xraww&quot;</span>
                             <span className="text-muted-foreground">,</span>
                         </div>
 
                         <div className="pl-4">
                             <span className="text-muted-foreground">fullName: </span>
-                            <span>"Alexis Bonzi"</span>
+                            <span>&quot;Alexis Bonzi&quot;</span>
                             <span className="text-muted-foreground">,</span>
                         </div>
 
                         
                         <div className="pl-4">
                             <span className="text-muted-foreground">job: </span>
-                            <span>"Web Developer"</span>
+                            <span>&quot;Web Developer&quot;</span>
                             <span className="text-muted-foreground">,</span>
                         </div>
 
                         <div className="pl-4">
                             <span className="text-muted-foreground">location: </span>
-                            <span>"France"</span>
+                            <span>&quot;France&quot;</span>
                             <span className="text-muted-foreground">,</span>
                         </div>
 
@@ -56,13 +56,13 @@ export default function AboutMe() {
 
                         <div className="pl-4">
                             <span className="text-muted-foreground">hobbies: </span>
-                            <span>["Coding", "Gaming", "Football", "Music"]</span>
+                            <span>&quot;Coding&quot;, &quot;Gaming&quot;, &quot;Football&quot;, &quot;Music&quot;</span>
                             <span className="text-muted-foreground">,</span>
                         </div>
 
                         <div className="pl-4">
                             <span className="text-muted-foreground">status: </span>
-                            <span>"Available"</span>
+                            <span>&quot;Available&quot;</span>
                         </div>
                         
                         <div>{'}'}</div>

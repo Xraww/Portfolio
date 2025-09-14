@@ -1,7 +1,7 @@
 "use client"
 
+import Script from "next/script"
 import { My_Projects } from "../../lib/projects"
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "../../components/ui/badge";
@@ -9,8 +9,16 @@ import { Plus } from "lucide-react";
 import GotoButton from "@/components/ui/goto-button";
 import Footer from "@/components/sections/footer";
 
+export const revalidate = 3600 // 1h
+
 export default function Projects() {
-    const router = useRouter();
+    const pageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        url: "https://xraww.fr/projects",
+        name: "Projects | Alexis Bonzi",
+        description: "Discover my projects in Next.js, React and Tailwind CSS."
+    }
 
     return (
         <div className="max-w-[640px] mx-auto">
@@ -18,8 +26,10 @@ export default function Projects() {
                 <GotoButton href="/" text="Back to Home" type="back"/>
 
                 <h1 className="border-b pb-2 text-2xl md:text-3xl font-semibold font-mono">
-                    What I've done 
+                    What I&apos;ve done 
                 </h1>
+
+                <Script id="json-ld-projects" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}/>
 
                 <p className="text-sm text-muted-foreground font-sans">
                     Always working on new exitings projects. Stay tuned for the next ones !

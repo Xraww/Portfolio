@@ -1,7 +1,6 @@
 "use client"
 
 import { My_Projects } from "../../lib/projects"
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
@@ -9,12 +8,10 @@ import { GalleryVerticalEnd, ChevronRight } from "lucide-react";
 import GotoButton from "../ui/goto-button";
 
 export default function Projects() {
-    const router = useRouter();
-
     return (
         <section className="flex flex-col gap-4 mx-4 md:mx-0">
             <h2 className="border-b pb-2 text-2xl md:text-3xl font-semibold font-mono">
-                What I've done 
+                What I&apos;ve done 
             </h2>
 
             <div className="flex justify-end">
@@ -83,7 +80,7 @@ export default function Projects() {
                                 </h3>
 
                                 <p className="text-sm text-muted-foreground font-sans">
-                                    Let's see what I've done !
+                                    Let&apos;s see what I&apos;ve done !
                                 </p>
                             </div>
                         </div>

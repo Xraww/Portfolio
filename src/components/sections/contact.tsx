@@ -30,7 +30,7 @@ export default function Contact() {
 
             <div className="flex flex-col gap-4">
                 <p className="text-muted-foreground font-sans">
-                    I'm always looking for new opportunities and collaborations. Feel free to contact me if you have any questions or want to work together.
+                    I&apos;m always looking for new opportunities and collaborations. Feel free to contact me if you have any questions or want to work together.
                 </p>
 
                 <div className="flex items-center gap-2 w-full">

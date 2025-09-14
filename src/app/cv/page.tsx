@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import GotoButton from "@/components/ui/goto-button";
@@ -11,7 +12,17 @@ import { My_Education, My_Experience, My_Stack_CV, Soft_Skills, stack_icons, CV_
 import Image from "next/image";
 import { useState } from "react";
 
+export const revalidate = 0 // always fresh
+
 export default function CV() {
+    const pageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        url: "https://xraww.fr/cv",
+        name: "Curriculum Vitae | Alexis Bonzi",
+        description: "View and download my CV as a web developer in PDF."
+    }
+
     const [language, setLanguage] = useState<("en" | "fr")>("en");
 
     // TODO: PDF A4 format
@@ -21,7 +32,9 @@ export default function CV() {
             <GotoButton href="/" text="Back to Home" type="back"/>
 
             <div className="flex flex-col md:flex-row justify-between items-center border-b pb-2 gap-4 md:gap-0">
-                <h1 className="text-2xl md:text-3xl font-semibold font-mono">Curriculum Vitae</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold font-mono">Curriculum Vitae - Alexis Bonzi</h1>
+
+                <Script id="json-ld-cv" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}/>
 
                 <div className="flex gap-4">
                     <div className="flex items-center gap-2">

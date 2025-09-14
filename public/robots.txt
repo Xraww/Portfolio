@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /api/og/*
+
+# Host
+Host: https://xraww.fr
+
+# Sitemaps
+Sitemap: https://xraww.fr/sitemap.xml

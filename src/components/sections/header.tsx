@@ -19,7 +19,7 @@ export default function Header() {
 
             <div className="flex flex-col gap-4">
                 <p className="text-muted-foreground italic font-sans text-sm md:text-base">
-                    I'm a fullstack developer with a passion for creating beautiful and functional web applications. Always ready to learn & work hard.
+                    I&apos;m a fullstack developer with a passion for creating beautiful and functional web applications. Always ready to learn & work hard.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-2">

@@ -15,7 +15,7 @@ export default function NotFound() {
                 <h1 className="border-b pb-2 text-2xl md:text-3xl font-semibold font-mono">404 - Page Not Found</h1>
                 
                 <p className="text-md text-muted-foreground font-sans">
-                    The page you are looking for does not exist. But don't worry, you can find everything you need on my website !
+                    The page you are looking for does not exist. But don&apos;t worry, you can find everything you need on my website !
                 </p>
 
                 <div className="relative flex justify-center items-center my-12 md:my-8">
