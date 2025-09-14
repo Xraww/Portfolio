@@ -9,8 +9,6 @@ import { Plus } from "lucide-react";
 import GotoButton from "@/components/ui/goto-button";
 import Footer from "@/components/sections/footer";
 
-export const revalidate = 3600 // 1h
-
 export default function Projects() {
     const pageSchema = {
         "@context": "https://schema.org",

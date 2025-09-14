@@ -12,8 +12,6 @@ import { My_Education, My_Experience, My_Stack_CV, Soft_Skills, stack_icons, CV_
 import Image from "next/image";
 import { useState } from "react";
 
-export const revalidate = 0 // always fresh
-
 export default function CV() {
     const pageSchema = {
         "@context": "https://schema.org",
