@@ -10,7 +10,7 @@ export default function Contact() {
 
     const handleCopy = async () => {
         try {
-            await navigator.clipboard.writeText("contact.xraww@gmail.com");
+            await navigator.clipboard.writeText("contact@xraww.fr");
             setCopied(true);
             
             // Reset the icon after 2 seconds
@@ -35,8 +35,8 @@ export default function Contact() {
 
                 <div className="flex items-center gap-2 w-full">
                     <Button variant="outline" size="sm" className="flex-1 font-mono" asChild>
-                        <Link href="mailto:contact.xraww@gmail.com" target="_blank" className="text-xs md:text-sm">
-                            contact.xraww@gmail.com
+                        <Link href="mailto:contact@xraww.fr" target="_blank" className="text-xs md:text-sm">
+                            contact@xraww.fr
                         </Link>
                     </Button>
 

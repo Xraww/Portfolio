@@ -29,9 +29,19 @@ export default function Projects() {
 
                 <Script id="json-ld-projects" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}/>
 
-                <p className="text-sm text-muted-foreground font-sans">
+                <p className="text-sm text-muted-foreground font-sans text-center">
                     Always working on new exitings projects. Stay tuned for the next ones !
                 </p>
+
+                <div className="flex gap-2 justify-center text-sm text-muted-foreground font-sans">
+                    <p>{My_Projects.length} Projects</p>
+                    -
+                    <p>{Array.from(new Set(My_Projects.flatMap(p => p.stack))).length} Technologies</p>
+                    -
+                    <p>{My_Projects.filter(p => p.code !== "").length} Source code</p>
+                    -
+                    <p>{My_Projects.filter(p => p.demo !== "").length} Live Demo</p>
+                </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                     {My_Projects.map((project) => (

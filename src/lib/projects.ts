@@ -108,8 +108,8 @@ export const My_Projects = [
             "Landing page with hero, services, faq and contact", 
             "Dynamic map with locations", 
         ],
-        demo: "https://conciergerie-gilt.vercel.app/",
-        code: "", // https://github.com/Xraww/Conciergerie
+        demo: "https://www.uzes-conciergerie.fr/",
+        code: "https://github.com/Xraww/Conciergerie",
         stack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI", "Framer Motion", "Leaflet"],
         images: { 
             base_url: "/images/projects/concierge-service/",

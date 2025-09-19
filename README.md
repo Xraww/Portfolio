@@ -118,7 +118,7 @@ This project is private and proprietary.
 - GitHub: [@Xraww](https://github.com/Xraww)
 - LinkedIn: [Alexis Bonzi](https://www.linkedin.com/in/xraww/)
 - Twitter: [@Xraaww](https://x.com/Xraaww)
-- Email: contact.xraww@gmail.com
+- Email: contact@xraww.fr
 
 ## 🤝 Contributing
 

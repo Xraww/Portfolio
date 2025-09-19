@@ -100,7 +100,7 @@ export default function CV() {
                             </Button>
 
                             <Button variant="link" size="sm" className="font-mono p-2 border hover:bg-accent hover:text-accent-foreground" asChild>
-                                <Link href="mailto:contact.xraww@gmail.com" target="_blank">
+                                <Link href="mailto:contact@xraww.fr" target="_blank">
                                     <Mail className="w-4 h-4"/>
                                 </Link>
                             </Button>

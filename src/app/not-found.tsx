@@ -70,7 +70,7 @@ export default function NotFound() {
                         </Button>
 
                         <Button variant="outline" size="sm" className="font-mono" asChild>
-                            <Link href="mailto:contact.xraww@gmail.com" target="_blank">
+                            <Link href="mailto:contact@xraww.fr" target="_blank">
                                 Email
                             </Link>
                         </Button>

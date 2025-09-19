@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -93,6 +94,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
             
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col gap-10`}>
                 {children}
+                <Analytics/>
             </body>
         </html>
     );
