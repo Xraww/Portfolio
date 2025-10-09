@@ -100,7 +100,7 @@ The portfolio features several projects including:
 
 1. **Anime Hub** - Interactive anime/manga platform (In Development)
 2. **League of Legends Tracker** - Player stats and champion database
-3. **Sneakers Collection** - E-commerce with admin panel
+3. **Benji Sneak Collection** - E-commerce with admin panel
 4. **Concierge Service** - Business landing page
 5. **Invoice Maker** - PDF invoice generation tool
 

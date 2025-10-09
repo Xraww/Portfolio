@@ -132,8 +132,8 @@ export const My_Experience = [
         },
         date: "2025",
         company: {
-            en: "Freelance - Sneakers",
-            fr: "Freelance - Sneakers",
+            en: "Freelance - Benji Sneak",
+            fr: "Freelance - Benji Sneak",
         },
         description: {
             en: "Developed a web application to manage a sneakers collection, including an admin panel for a reseller.",
@@ -147,8 +147,8 @@ export const My_Experience = [
         },
         date: "2025",
         company: {
-            en: "Freelance - Concierge service",
-            fr: "Freelance - Service de conciergerie",
+            en: "Freelance - Conciergerie de l'Uzège",
+            fr: "Freelance - Conciergerie de l'Uzège",
         },
         description: {
             en: "Created a responsive landing page for a concierge service business.",

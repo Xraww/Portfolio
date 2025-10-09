@@ -80,7 +80,7 @@ export const My_Projects = [
     },
     {
         id: "sneakers",
-        name: "Sneakers",
+        name: "Benji Sneak",
         description: "Manage a sneakers collection with admin panel and more...",
         features: [
             "Landing page with hero, new arrivals, story, quality and contact", 
