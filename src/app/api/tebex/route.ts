@@ -1,36 +1,36 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 
-const WEBHOOK_SECRET = process.env.TEBEX_WEBHOOK_SECRET!; // set in Vercel env vars
+const WEBHOOK_SECRET = process.env.TEBEX_WEBHOOK_SECRET!;
 
+// Handle POST (Tebex validation + real webhooks)
 export async function POST(req: NextRequest) {
-    try {
-        const rawBody = await req.text(); // raw body for signature check
-        const signature = req.headers.get("x-signature");
+    const signature = req.headers.get("x-signature");
+    const rawBody = await req.text();
 
-        // Verify signature
-        const expected = crypto
+    // Tebex validation request → no signature yet
+    if (!signature) {
+        // Respond with empty 200 OK (required by Tebex)
+        return new NextResponse(null, { status: 200 });
+    }
+
+    // Verify signature for actual events
+    const expected = crypto
         .createHmac("sha256", WEBHOOK_SECRET)
         .update(rawBody)
         .digest("hex");
 
-        if (signature !== expected) {
-            return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
-        }
-
-        const event = JSON.parse(rawBody);
-        console.log("✅ Tebex event received:", event.type);
-
-        // Example: handle payment completion
-        if (event.type === "payment.completed") {
-            const data = event.data;
-            console.log("Payment data:", data);
-            // ... do something, e.g. update your DB or send Discord notif
-        }
-
-        return NextResponse.json({ ok: true });
-    } catch (err) {
-        console.error("❌ Webhook error:", err);
-        return NextResponse.json({ error: "Server error" }, { status: 500 });
+    if (signature !== expected) {
+        return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
     }
+
+    const event = JSON.parse(rawBody);
+    console.log("✅ Tebex event received:", event.type);
+
+    return NextResponse.json({ ok: true });
+}
+
+// Optional: handle GET requests cleanly
+export async function GET() {
+  return new NextResponse("Tebex webhook endpoint", { status: 200 });
 }
