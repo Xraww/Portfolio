@@ -49,7 +49,7 @@ export default function Header() {
 
                     <Button variant="outline" size="sm" className="font-mono" asChild>
                         <Link href="/cv">
-                            CV
+                            Web CV
                         </Link>
                     </Button>
                 </div>

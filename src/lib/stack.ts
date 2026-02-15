@@ -7,7 +7,6 @@ export const stack_icons = {
   Prisma: "https://github.com/prisma.png",
   PostgreSQL: "https://github.com/postgresql.png",
   Vercel: "https://github.com/vercel.png",
-  Cursor: "https://github.com/cursor.png",
   Lua: "https://github.com/lua.png",
   "Shadcn UI": "https://github.com/shadcn.png",
   "Framer Motion":
@@ -70,6 +69,13 @@ export const My_Stack = [
     description: "The CSS framework created and maintained by @tailwindlabs.",
   },
   {
+    name: "Node.js",
+    sentence:
+      "The JavaScript runtime I use to run my web applications on the server",
+    description:
+      "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser, maintained by the Node.js Foundation.",
+  },
+  {
     name: "Prisma",
     sentence: "The ORM I use to interact with my database",
     description: "The ORM created and maintained by @prisma.",
@@ -85,11 +91,6 @@ export const My_Stack = [
     description: "The platform created and maintained by @vercel.",
   },
   {
-    name: "Cursor",
-    sentence: "The AI-powered code editor I use to write my code",
-    description: "The code editor created and maintained by @cursor.",
-  },
-  {
     name: "Lua",
     sentence:
       "It's the first programming language I learned at 13 years old by modding GTA V, creating scripts and new game modes with Lua on FiveM.",
@@ -102,7 +103,6 @@ export const My_Stack_CV = {
   backend: ["Node.js", "Prisma", "PostgreSQL", "MongoDB", "APIs REST", "MySQL"],
   tools: [
     "Git / GitHub",
-    "Cursor",
     "Postman",
     "Lua",
     // "Claude Code",
