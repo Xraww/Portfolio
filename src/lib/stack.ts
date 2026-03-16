@@ -9,13 +9,15 @@ export const stack_icons = {
   Vercel: "https://github.com/vercel.png",
   Lua: "https://github.com/lua.png",
   "Shadcn UI": "https://github.com/shadcn.png",
-  "Framer Motion":
-    "https://github.com/user-attachments/assets/00d6d1c3-72c4-4c2f-a664-69da13182ffc",
+  Motion: "https://github.com/motiondivision.png",
   "Better-Auth":
     "https://imgs.search.brave.com/eQ0eBhrtfMrBpQvvD_pDOZH0DskT_IenueV5m8JwddM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDBlYTI5OGRi/MzllYWVmZmNkYzZh/MmFlZWM3ZGU5YmRk/NzY3NGE0YmEzZTBh/YTRjMzMzZjY3MDQw/MDBmOTVjMS93d3cu/YmV0dGVyLWF1dGgu/Y29tLw",
   Resend:
     "https://imgs.search.brave.com/AtK-CnWaNjKNZ0V8gNteX6OAPsaIGSNRSTHAb3BqN98/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzkwNTMyMjRh/NjJiMjJkNTc4OTFl/Y2ExNDQ2MjYwMTlh/NzRmYzcwZDBlNDc2/ZTgxZWI2OTEwMzA2/OWZjNjkxMi9yZXNl/bmQuY29tLw",
   Zod: "https://imgs.search.brave.com/OEmg1EoK66bQdHvb875_FR9F0OLWYFFu4ItYISoeVkM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzI0NGZiY2Fl/NTYxMDNlYmI4MDNh/ZWMxYjA2ZDJkMTUx/OTk1ZDViZjVlY2Yy/YWUzZTYzMmRiYTFk/MzQwZWZkNy96b2Qu/ZGV2Lw",
+  "React Query": "https://github.com/TanStack.png",
+  "React Hook Form": "https://github.com/react-hook-form.png",
+  nuqs: "https://github.com/47ng.png",
   "Riot API":
     "https://imgs.search.brave.com/D7UcnY-s6MAYBUC0-tHrbz5yMn53p3z0otKb1yP3hqc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGVkMmE0MjEx/YTI0MWQ1Y2IwNzAz/OWYxNjBhZDQ1NDA1/NTM1Mzk2NjcyMWU0/MTljNjcxMTUxOTcx/YzVlMWYwYy93d3cu/cmlvdGdhbWVzLmNv/bS8",
   "Node.js":
